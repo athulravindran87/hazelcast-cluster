@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/discovery-server/discovery-server.iml" filepath="$PROJECT_DIR$/discovery-server/discovery-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hazelcast-client-1/hazelcast-client-1.iml" filepath="$PROJECT_DIR$/hazelcast-client-1/hazelcast-client-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hazelcast-client-2/hazelcast-client-2.iml" filepath="$PROJECT_DIR$/hazelcast-client-2/hazelcast-client-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hazelcast-cluster.iml" filepath="$PROJECT_DIR$/hazelcast-cluster.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hazelcast-server-1/hazelcast-server-1.iml" filepath="$PROJECT_DIR$/hazelcast-server-1/hazelcast-server-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hazelcast-server-2/hazelcast-server-2.iml" filepath="$PROJECT_DIR$/hazelcast-server-2/hazelcast-server-2.iml" />
+    </modules>
+  </component>
+</project>
