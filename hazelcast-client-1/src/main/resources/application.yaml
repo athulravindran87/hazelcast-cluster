@@ -1,0 +1,23 @@
+server:
+  port: 8764
+spring:
+  application:
+    name: hazelcast-client-1
+  profiles:
+    active: local
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
+    hostname: localhost
+    status-page-url: http://${eureka.instance.hostname}:${server.port}/actuator/info
+    health-check-url: http://${eureka.instance.hostname}:${server.port}/actuator/health
+    home-page-url: http://${eureka.instance.hostname}:${server.port}/actuator/env
+    appname: ${spring.application.name}
+
+
