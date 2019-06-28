@@ -21,3 +21,16 @@ eureka:
     appname: ${spring.application.name}
 
 
+endpoints:
+  health.sensitive: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+  info:
+    git:
+      mode: full
