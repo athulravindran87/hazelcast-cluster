@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/common-config/common-config.iml" filepath="$PROJECT_DIR$/common-config/common-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/discovery-server/discovery-server.iml" filepath="$PROJECT_DIR$/discovery-server/discovery-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/hazelcast-client-1/hazelcast-client-1.iml" filepath="$PROJECT_DIR$/hazelcast-client-1/hazelcast-client-1.iml" />
       <module fileurl="file://$PROJECT_DIR$/hazelcast-client-2/hazelcast-client-2.iml" filepath="$PROJECT_DIR$/hazelcast-client-2/hazelcast-client-2.iml" />

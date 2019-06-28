@@ -1,18 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9cb6967-c97d-40de-a938-f55296f8f7c2" name="Default Changelist" comment="">
+    <list default="true" id="f9cb6967-c97d-40de-a938-f55296f8f7c2" name="Default Changelist" comment="Added Eureka Annotations">
+      <change afterPath="$PROJECT_DIR$/common-config/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-config/src/main/java/com/athul/common/client/CacheController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-config/src/main/java/com/athul/common/client/ClientConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-config/src/main/java/com/athul/common/client/QueueController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-config/src/main/java/com/athul/common/server/HazelcastHealth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-config/src/main/java/com/athul/common/server/ServerConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-config/src/main/resources/eureka-client.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-config/src/test/java/com/athul/AllTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-config/src/test/java/com/athul/common/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-config/src/test/java/com/athul/common/client/CacheControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-config/src/test/java/com/athul/common/client/ClientConfigurationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-config/src/test/java/com/athul/common/client/QueueControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-config/src/test/java/com/athul/common/server/HazelcastHealthTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-config/src/test/java/com/athul/common/server/ServerConfigurationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/java/com/athul/discoveryserver/DiscoveryServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/java/com/athul/discoveryserver/DiscoveryServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hazelcast-client-1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hazelcast-client-1/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hazelcast-client-1/src/main/java/com/athul/hazelcastclient1/HazelcastClient1Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/hazelcast-client-1/src/main/java/com/athul/hazelcastclient1/HazelcastClient1Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hazelcast-client-1/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hazelcast-client-1/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hazelcast-client-1/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/hazelcast-client-1/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hazelcast-client-2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hazelcast-client-2/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hazelcast-client-2/src/main/java/com/athul/hazelcastclient2/HazelcastClient2Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/hazelcast-client-2/src/main/java/com/athul/hazelcastclient2/HazelcastClient2Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hazelcast-client-2/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hazelcast-client-2/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hazelcast-client-2/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/hazelcast-client-2/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hazelcast-cluster.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hazelcast-cluster.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hazelcast-server-1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hazelcast-server-1/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hazelcast-server-1/src/main/java/com/athul/hazelcastserver1/HazelcastServer1Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/hazelcast-server-1/src/main/java/com/athul/hazelcastserver1/HazelcastServer1Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hazelcast-server-1/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hazelcast-server-1/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hazelcast-server-1/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/hazelcast-server-1/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hazelcast-server-2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hazelcast-server-2/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hazelcast-server-2/src/main/java/com/athul/hazelcastserver2/HazelcastServer2Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/hazelcast-server-2/src/main/java/com/athul/hazelcastserver2/HazelcastServer2Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hazelcast-server-2/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hazelcast-server-2/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hazelcast-server-2/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/hazelcast-server-2/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
@@ -22,6 +44,7 @@
     <ignored path="$PROJECT_DIR$/hazelcast-client-1/target/" />
     <ignored path="$PROJECT_DIR$/hazelcast-client-2/target/" />
     <ignored path="$PROJECT_DIR$/discovery-server/target/" />
+    <ignored path="$PROJECT_DIR$/common-config/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,91 +57,100 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hazelcast-server-1/src/main/resources/application.yaml">
+        <entry file="file://$PROJECT_DIR$/common-config/src/main/java/com/athul/common/server/ServerConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hazelcast-server-2/src/main/java/com/athul/hazelcastserver2/HazelcastServer2Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hazelcast-client-1/src/main/java/com/athul/hazelcastclient1/HazelcastClient1Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+            <state relative-caret-position="749">
+              <caret line="87" column="90" selection-start-line="87" selection-start-column="90" selection-end-line="87" selection-end-column="90" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hazelcast-client-2/src/main/java/com/athul/hazelcastclient2/HazelcastClient2Application.java">
+        <entry file="file://$PROJECT_DIR$/common-config/src/test/java/com/athul/common/server/HazelcastHealthTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+            <state relative-caret-position="107">
+              <caret line="162" column="9" lean-forward="true" selection-start-line="162" selection-start-column="9" selection-end-line="162" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/discovery-server/src/main/resources/application.yaml">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/src.zip!/java/net/InetAddress.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+            <state relative-caret-position="15">
+              <caret line="1469" column="30" selection-start-line="1469" selection-start-column="30" selection-end-line="1469" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/discovery-server/src/main/java/com/athul/discoveryserver/DiscoveryServerApplication.java">
+        <entry file="file://$PROJECT_DIR$/common-config/src/test/java/com/athul/common/server/ServerConfigurationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+            <state relative-caret-position="-788">
+              <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hazelcast-server-1/src/main/java/com/athul/hazelcastserver1/HazelcastServer1Application.java">
+        <entry file="file://$PROJECT_DIR$/common-config/src/main/java/com/athul/common/server/HazelcastHealth.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+            <state relative-caret-position="153">
+              <caret line="79" column="38" selection-start-line="79" selection-start-column="38" selection-end-line="79" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hazelcast-server-2/src/main/resources/application.yaml">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/collections/eclipse-collections/9.2.0/eclipse-collections-9.2.0.jar!/org/eclipse/collections/impl/utility/internal/IteratorIterate.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="226">
+              <caret line="209" selection-start-line="209" selection-end-line="209" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hazelcast-client-1/src/main/resources/application.yaml">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/collections/eclipse-collections/9.2.0/eclipse-collections-9.2.0.jar!/org/eclipse/collections/impl/utility/internal/IterableIterate.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+            <state relative-caret-position="151">
+              <caret line="132" selection-start-line="132" selection-end-line="132" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hazelcast-client-2/src/main/resources/application.yaml">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/collections/eclipse-collections-api/9.2.0/eclipse-collections-api-9.2.0.jar!/org/eclipse/collections/api/block/predicate/Predicate.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="21" selection-start-line="14" selection-end-line="21" />
+            <state relative-caret-position="120">
+              <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/collections/eclipse-collections-api/9.2.0/eclipse-collections-api-9.2.0.jar!/org/eclipse/collections/api/block/function/Function.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common-config/src/test/java/com/athul/AllTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -128,6 +160,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="spring-beans.schema" />
+        <option value="JUnit4 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -136,6 +170,20 @@
     <findStrings>
       <find>project.build.directory</find>
       <find>generateGitPropertiesFilename</find>
+      <find>datastore</find>
+      <find>scanBasePackages = &quot;com.athul.server&quot;</find>
+      <find>eureka-client.prop</find>
+      <find>.proper</find>
+      <find>eureka-clie</find>
+      <find>eureka-client</find>
+      <find>eureka.client.prop</find>
+      <find>hz-cluster</find>
+      <find>eureka-client.</find>
+      <find>members</find>
+      <find>AllTests</find>
+      <find>join</find>
+      <find>mapServiceName</find>
+      <find>map</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -144,15 +192,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/hazelcast-client-2/pom.xml" />
-        <option value="$PROJECT_DIR$/discovery-server/pom.xml" />
-        <option value="$PROJECT_DIR$/hazelcast-client-1/pom.xml" />
-        <option value="$PROJECT_DIR$/hazelcast-server-1/pom.xml" />
-        <option value="$PROJECT_DIR$/hazelcast-server-2/pom.xml" />
-        <option value="$PROJECT_DIR$/discovery-server/src/test/java/com/athul/discoveryserver/DiscoveryServerApplicationTests.java" />
-        <option value="$PROJECT_DIR$/discovery-server/src/test/java/com/athul/discoveryserver/AllTests.java" />
-        <option value="$PROJECT_DIR$/discovery-server/src/test/java/com/athul/AllTests.java" />
-        <option value="$PROJECT_DIR$/hazelcast-client-1/src/test/java/com/athul/hazelcastclient1/AllTests.java" />
         <option value="$PROJECT_DIR$/hazelcast-client-1/src/test/java/com/athul/AllTests.java" />
         <option value="$PROJECT_DIR$/hazelcast-client-2/src/test/java/com/athul/hazelcastclient2/AllTests.java" />
         <option value="$PROJECT_DIR$/hazelcast-server-1/src/test/java/com/athul/hazelcastserver1/AllTests.java" />
@@ -169,18 +208,41 @@
         <option value="$PROJECT_DIR$/hazelcast-server-1/.gitignore" />
         <option value="$PROJECT_DIR$/hazelcast-server-2/.gitignore" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/hazelcast-server-2/src/main/resources/application.yaml" />
-        <option value="$PROJECT_DIR$/hazelcast-client-1/src/main/resources/application.yaml" />
-        <option value="$PROJECT_DIR$/hazelcast-client-2/src/main/resources/application.yaml" />
-        <option value="$PROJECT_DIR$/discovery-server/src/main/resources/application.yaml" />
         <option value="$PROJECT_DIR$/discovery-server/src/main/java/com/athul/discoveryserver/DiscoveryServerApplication.java" />
-        <option value="$PROJECT_DIR$/hazelcast-server-1/src/main/java/com/athul/hazelcastserver1/HazelcastServer1Application.java" />
-        <option value="$PROJECT_DIR$/hazelcast-server-1/src/main/resources/application.yaml" />
-        <option value="$PROJECT_DIR$/hazelcast-server-2/src/main/java/com/athul/hazelcastserver2/HazelcastServer2Application.java" />
+        <option value="$PROJECT_DIR$/hazelcast-server-1/src/main/java/com/athul/hazelcastserver1/ServerConfiguration.java" />
+        <option value="$PROJECT_DIR$/common-config/src/main/java/common/sever/ServerConfiguration.java" />
+        <option value="$PROJECT_DIR$/common-config/src/test/com/athul/common/AllTests.java" />
+        <option value="$PROJECT_DIR$/hazelcast-server-2/pom.xml" />
+        <option value="$PROJECT_DIR$/hazelcast-server-1/pom.xml" />
+        <option value="$PROJECT_DIR$/hazelcast-client-2/pom.xml" />
+        <option value="$PROJECT_DIR$/hazelcast-client-1/pom.xml" />
         <option value="$PROJECT_DIR$/hazelcast-client-1/src/main/java/com/athul/hazelcastclient1/HazelcastClient1Application.java" />
         <option value="$PROJECT_DIR$/hazelcast-client-2/src/main/java/com/athul/hazelcastclient2/HazelcastClient2Application.java" />
+        <option value="$PROJECT_DIR$/hazelcast-server-1/src/main/java/com/athul/hazelcastserver1/HazelcastServer1Application.java" />
+        <option value="$PROJECT_DIR$/hazelcast-server-2/src/main/java/com/athul/hazelcastserver2/HazelcastServer2Application.java" />
+        <option value="$PROJECT_DIR$/discovery-server/src/main/resources/application.yaml" />
+        <option value="$PROJECT_DIR$/common-config/src/main/resources/eureka-client.properties" />
+        <option value="$PROJECT_DIR$/common-config/src/main/java/com/athul/common/client/ClientConfiguration.java" />
+        <option value="$PROJECT_DIR$/hazelcast-server-1/src/main/resources/application.yaml" />
+        <option value="$PROJECT_DIR$/hazelcast-server-2/src/main/resources/application.yaml" />
+        <option value="$PROJECT_DIR$/hazelcast-client-2/src/main/resources/application.yaml" />
+        <option value="$PROJECT_DIR$/hazelcast-client-1/src/main/resources/application.yaml" />
+        <option value="$PROJECT_DIR$/common-config/src/main/java/com/athul/common/server/CacheController.java" />
+        <option value="$PROJECT_DIR$/common-config/src/main/java/com/athul/common/client/CacheController.java" />
+        <option value="$PROJECT_DIR$/common-config/src/main/java/com/athul/common/client/QueueController.java" />
+        <option value="$PROJECT_DIR$/common-config/src/test/com/athul/AllTests.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/common-config/src/main/java/com/athul/common/server/ServerConfiguration.java" />
+        <option value="$PROJECT_DIR$/common-config/src/test/com/athul/common/BaseTest.java" />
+        <option value="$PROJECT_DIR$/common-config/src/test/com/athul/common/client/CacheControllerTest.java" />
+        <option value="$PROJECT_DIR$/common-config/src/test/com/athul/common/client/ClientConfigurationTest.java" />
+        <option value="$PROJECT_DIR$/common-config/src/test/com/athul/common/client/QueueControllerTest.java" />
+        <option value="$PROJECT_DIR$/common-config/src/test/com/athul/common/server/HazelcastHealthTest.java" />
+        <option value="$PROJECT_DIR$/common-config/src/test/com/athul/common/server/ServerConfigurationTest.java" />
+        <option value="$PROJECT_DIR$/common-config/pom.xml" />
+        <option value="$PROJECT_DIR$/common-config/src/main/java/com/athul/common/server/HazelcastHealth.java" />
+        <option value="$PROJECT_DIR$/common-config/src/test/java/com/athul/common/server/HazelcastHealthTest.java" />
       </list>
     </option>
   </component>
@@ -196,6 +258,24 @@
   <component name="MavenProjectNavigator">
     <treeState>
       <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="common-config" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="common-config" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="discovery-server" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="discovery-server" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="hazelcast-cluster" type="9519ce18:MavenProjectsStructure$ProjectNode" />
@@ -220,7 +300,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -232,25 +311,144 @@
             <path>
               <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
               <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
-              <item name="discovery-server" type="462c0819:PsiDirectoryNode" />
+              <item name="common-config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
               <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
-              <item name="discovery-server" type="462c0819:PsiDirectoryNode" />
+              <item name="common-config" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
               <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
-              <item name="discovery-server" type="462c0819:PsiDirectoryNode" />
+              <item name="common-config" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
               <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
-              <item name="discovery-server" type="462c0819:PsiDirectoryNode" />
+              <item name="common-config" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
+              <item name="common-config" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
+              <item name="common-config" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
+              <item name="common-config" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
+              <item name="common-config" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
+              <item name="common-config" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
+              <item name="common-config" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
+              <item name="common-config" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="athul" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
+              <item name="common-config" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="athul" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
+              <item name="common-config" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="athul" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
+              <item name="common-config" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="athul" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
+              <item name="hazelcast-client-1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
+              <item name="hazelcast-client-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
+              <item name="hazelcast-client-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
+              <item name="hazelcast-client-1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -258,16 +456,66 @@
             <path>
               <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
               <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
-              <item name="discovery-server" type="462c0819:PsiDirectoryNode" />
+              <item name="hazelcast-client-1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="discoveryserver" type="462c0819:PsiDirectoryNode" />
+              <item name="hazelcastclient1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
               <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
-              <item name="discovery-server" type="462c0819:PsiDirectoryNode" />
+              <item name="hazelcast-client-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
+              <item name="hazelcast-client-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
+              <item name="hazelcast-client-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
+              <item name="hazelcast-client-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="athul" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
+              <item name="hazelcast-client-2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
+              <item name="hazelcast-client-2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
+              <item name="hazelcast-client-2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
+              <item name="hazelcast-client-2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
@@ -276,26 +524,15 @@
               <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
               <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
               <item name="hazelcast-client-2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
               <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
               <item name="hazelcast-client-2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
-              <item name="hazelcast-client-2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
-              <item name="hazelcast-client-2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -303,52 +540,19 @@
               <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
               <item name="hazelcast-client-2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="hazelcastclient2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
-              <item name="hazelcast-server-2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
-              <item name="hazelcast-server-2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
-              <item name="hazelcast-server-2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
-              <item name="hazelcast-server-2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hazelcast-cluster" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hazelcast-cluster" type="462c0819:PsiDirectoryNode" />
-              <item name="hazelcast-server-2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hazelcastserver2" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -357,8 +561,10 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/hazelcast-server-2/src/test/java/com/athul" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/common-config/src/test/com/athul" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hazelcast-server-1/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -367,10 +573,31 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.athul.common.server" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/common-config/src/test/java" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.athul.common" />
+      <recent name="com.athul.common.client" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.athul.common.client" />
+      <recent name="com.athul.common.server" />
+      <recent name="com.athul.hazelcastserver1" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/hazelcast-server-1/src/main/resources" />
+      <recent name="$PROJECT_DIR$/common-config/src/main/resources" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -391,7 +618,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.HazelcastServer1Application">
+  <component name="RunManager" selected="JUnit.HazelcastHealthTest.testCacheStats">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -400,6 +627,87 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AllTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="common-config" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.athul.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.athul" />
+      <option name="MAIN_CLASS_NAME" value="com.athul.AllTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CacheControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="common-config" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.athul.common.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.athul.common.client" />
+      <option name="MAIN_CLASS_NAME" value="com.athul.common.client.CacheControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HazelcastHealthTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="common-config" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.athul.common.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.athul.common.server" />
+      <option name="MAIN_CLASS_NAME" value="com.athul.common.server.HazelcastHealthTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HazelcastHealthTest.testCacheStats" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="common-config" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.athul.common.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.athul.common.server" />
+      <option name="MAIN_CLASS_NAME" value="com.athul.common.server.HazelcastHealthTest" />
+      <option name="METHOD_NAME" value="testCacheStats" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QueueControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="common-config" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.athul.common.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.athul.common.client" />
+      <option name="MAIN_CLASS_NAME" value="com.athul.common.client.QueueControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -414,6 +722,8 @@
     <configuration name="DiscoveryServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="discovery-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.athul.discoveryserver.DiscoveryServerApplication" />
+      <option name="VM_PARAMETERS" value="-Xms256m -Xmx512m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -421,6 +731,8 @@
     <configuration name="HazelcastClient1Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="hazelcast-client-1" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.athul.hazelcastclient1.HazelcastClient1Application" />
+      <option name="VM_PARAMETERS" value="-Deureka.client.props=eureka-client -Xms1024m -Xmx1024m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -428,6 +740,8 @@
     <configuration name="HazelcastClient2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="hazelcast-client-2" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.athul.hazelcastclient2.HazelcastClient2Application" />
+      <option name="VM_PARAMETERS" value="-Deureka.client.props=eureka-client -Xms=512m -Xmx=1024m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -435,6 +749,8 @@
     <configuration name="HazelcastServer1Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="hazelcast-server-1" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.athul.hazelcastserver1.HazelcastServer1Application" />
+      <option name="VM_PARAMETERS" value="-Deureka.client.props=eureka-client -Dhazelcast.port=5701 -Xms256m -Xmx512m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -442,6 +758,8 @@
     <configuration name="HazelcastServer2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="hazelcast-server-2" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.athul.hazelcastserver2.HazelcastServer2Application" />
+      <option name="VM_PARAMETERS" value="-Deureka.client.props=eureka-client -Dhazelcast.port=5702 -Xms256m -Xmx512m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -464,6 +782,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.AllTests" />
+      <item itemvalue="JUnit.HazelcastHealthTest" />
+      <item itemvalue="JUnit.HazelcastHealthTest.testCacheStats" />
+      <item itemvalue="JUnit.CacheControllerTest" />
+      <item itemvalue="JUnit.QueueControllerTest" />
+      <item itemvalue="Spring Boot.DiscoveryServerApplication" />
+      <item itemvalue="Spring Boot.HazelcastClient1Application" />
+      <item itemvalue="Spring Boot.HazelcastClient2Application" />
+      <item itemvalue="Spring Boot.HazelcastServer1Application" />
+      <item itemvalue="Spring Boot.HazelcastServer2Application" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.HazelcastHealthTest.testCacheStats" />
+        <item itemvalue="JUnit.HazelcastHealthTest" />
+        <item itemvalue="JUnit.AllTests" />
+        <item itemvalue="JUnit.QueueControllerTest" />
+        <item itemvalue="JUnit.CacheControllerTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -476,7 +815,9 @@
       <option name="presentableId" value="Default" />
       <updated>1561321801059</updated>
       <workItem from="1561321806008" duration="2066000" />
-      <workItem from="1561324005352" duration="3421000" />
+      <workItem from="1561324005352" duration="6659000" />
+      <workItem from="1561347340932" duration="27289000" />
+      <workItem from="1561518180535" duration="4949000" />
     </task>
     <task id="LOCAL-00001" summary="base structure of the project with tests">
       <created>1561324228310</created>
@@ -485,16 +826,56 @@
       <option name="project" value="LOCAL" />
       <updated>1561324228310</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Eureka Annotations">
+      <created>1561343149981</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1561343149989</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="AllTests - 2019.06.27 at 22h 09m 23s.xml">
+      <configuration name="AllTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HazelcastHealthTest - 2019.06.27 at 22h 12m 24s.xml">
+      <configuration name="HazelcastHealthTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HazelcastHealthTest_testCacheStats - 2019.06.27 at 22h 15m 16s.xml">
+      <configuration name="HazelcastHealthTest.testCacheStats" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HazelcastHealthTest_testCacheStats - 2019.06.27 at 22h 15m 31s.xml">
+      <configuration name="HazelcastHealthTest.testCacheStats" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HazelcastHealthTest_testCacheStats - 2019.06.27 at 22h 20m 59s.xml">
+      <configuration name="HazelcastHealthTest.testCacheStats" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HazelcastHealthTest_testCacheStats - 2019.06.27 at 22h 22m 57s.xml">
+      <configuration name="HazelcastHealthTest.testCacheStats" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HazelcastHealthTest_testCacheStats - 2019.06.27 at 22h 26m 24s.xml">
+      <configuration name="HazelcastHealthTest.testCacheStats" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HazelcastHealthTest_testCacheStats - 2019.06.27 at 22h 26m 39s.xml">
+      <configuration name="HazelcastHealthTest.testCacheStats" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HazelcastHealthTest_testCacheStats - 2019.06.27 at 22h 27m 09s.xml">
+      <configuration name="HazelcastHealthTest.testCacheStats" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HazelcastHealthTest_testCacheStats - 2019.06.27 at 22h 27m 35s.xml">
+      <configuration name="HazelcastHealthTest.testCacheStats" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5487000" />
+    <option name="totallyTimeSpent" value="40963000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3350144" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3465418" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -502,11 +883,10 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49927953" weight="0.3292232" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3292232" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49927953" visible="true" weight="0.4537608" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39950678" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -518,7 +898,46 @@
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.5302096" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.5302096" />
+      <window_info anchor="bottom" id="Messages" order="16" weight="0.3292232" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info active="true" anchor="right" id="Maven" order="3" visible="true" weight="0.3299712" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.3299712" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3465418" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3292232" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49927953" visible="true" weight="0.4537608" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39950678" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49927953" weight="0.3292232" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50072044" side_tool="true" weight="0.3292232" />
+      <window_info anchor="bottom" id="SonarLint" order="11" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.5302096" />
+      <window_info anchor="bottom" id="Messages" order="16" weight="0.3292232" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -529,220 +948,99 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
-    </layout>
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.3299712" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="base structure of the project with tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="base structure of the project with tests" />
+    <MESSAGE value="Added Eureka Annotations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Eureka Annotations" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/common-config/src/test/java/com/athul/common/server/HazelcastHealthTest.java</url>
+          <line>137</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/common-config/src/main/java/com/athul/common/server/HazelcastHealth.java</url>
+          <line>83</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/hazelcast_cluster$AllTests.ic" NAME="AllTests Coverage Results" MODIFIED="1561516688959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.athul.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/hazelcast_cluster$HazelcastHealthTest.ic" NAME="HazelcastHealthTest Coverage Results" MODIFIED="1561433261648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.athul.common.server.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>hazelcastInstance.getMap(distributedObject.getName())</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>distributedObject.getName()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>CollectionAdapter.adapt(
+                hazelcastInstance.getDistributedObjects()).select(
+                distributedObject-&gt;distributedObject.getServiceName().endsWith(&quot;mapService&quot;))</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>CollectionAdapter.adapt(
+                hazelcastInstance.getDistributedObjects())</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>instance.getCluster().getMembers().stream().map(Member::getAddress).collect(Collectors.toList())</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>testObj.health().getDetails().</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>testObj.health().getDetails()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>assertThat(testObj.health().getDetails()
+               , hasEntry(&quot;Version&quot;,Version.of(&quot;3.12&quot;)))</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>testObj.health().getDetails().entrySet().contains(&quot;Caches&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hazelcast-client-2/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hazelcast-client-1/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hazelcast-server-1/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hazelcast-server-2/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/discovery-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-309">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/discovery-server/src/test/java/com/athul/AllTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3/lib/maven-model-builder-3.3.9.jar!/org/apache/maven/model/pom-4.0.0.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hazelcast-client-1/src/test/java/com/athul/AllTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hazelcast-server-1/src/test/java/com/athul/AllTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hazelcast-server-2/src/test/java/com/athul/AllTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hazelcast-client-1/src/test/java/com/athul/hazelcastclient1/HazelcastClient1ApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hazelcast-client-2/src/test/java/com/athul/hazelcastclient2/HazelcastClient2ApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/discovery-server/src/test/java/com/athul/discoveryserver/DiscoveryServerApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="15" selection-start-line="15" selection-end-line="16" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hazelcast-server-2/src/test/java/com/athul/hazelcastserver2/HazelcastServer2ApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hazelcast-server-1/src/test/java/com/athul/hazelcastserver1/HazelcastServer1ApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hazelcast-client-2/src/test/java/com/athul/hazelcastclient2/AllTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/discovery-server/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hazelcast-client-1/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hazelcast-client-2/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hazelcast-server-1/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hazelcast-server-2/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="157" column="18" lean-forward="true" selection-start-line="157" selection-start-column="18" selection-end-line="157" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hazelcast-server-2/src/main/resources/application.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hazelcast-client-1/src/main/resources/application.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hazelcast-client-2/src/main/resources/application.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="21" selection-start-line="14" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/discovery-server/src/main/resources/application.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/common-config/src/main/java/common/sever/ServerConfiguration.java" />
     <entry file="file://$PROJECT_DIR$/discovery-server/src/main/java/com/athul/discoveryserver/DiscoveryServerApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -750,38 +1048,357 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hazelcast-server-1/src/main/java/com/athul/hazelcastserver1/HazelcastServer1Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hazelcast-server-1/src/main/resources/application.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/common-config/src/main/java/com/athul/App.java" />
     <entry file="file://$PROJECT_DIR$/hazelcast-server-2/src/main/java/com/athul/hazelcastserver2/HazelcastServer2Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        <state relative-caret-position="60">
+          <caret line="6" column="68" selection-start-line="6" selection-start-column="68" selection-end-line="6" selection-end-column="68" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hazelcast-client-1/src/main/java/com/athul/hazelcastclient1/HazelcastClient1Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        <state relative-caret-position="60">
+          <caret line="6" column="68" selection-start-line="6" selection-end-line="6" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hazelcast-server-2/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="38" selection-start-line="33" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hazelcast-client-2/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hazelcast-client-1/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hazelcast-client-2/src/main/java/com/athul/hazelcastclient2/HazelcastClient2Application.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hazelcast-server-1/src/main/resources/eureka-client.properties" />
+    <entry file="file://$PROJECT_DIR$/hazelcast-server-1/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-111">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/discovery-server/src/main/resources/application.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="16" selection-start-line="23" selection-end-line="30" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hazelcast-server-1/src/main/resources/application.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="24" selection-start-line="22" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hazelcast-server-2/src/main/resources/application.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="36" column="16" lean-forward="true" selection-start-line="23" selection-end-line="36" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hazelcast-client-2/src/main/resources/application.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-config/src/main/resources/eureka-client.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="57" lean-forward="true" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hazelcast-client-1/src/main/resources/application.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hazelcast-server-1/src/main/java/com/athul/hazelcastserver1/HazelcastServer1Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/powermock/powermock-module-junit4/2.0.2/powermock-module-junit4-2.0.2.jar!/org/powermock/modules/junit4/internal/impl/PowerMockJUnit44RunnerDelegateImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="302" selection-start-line="302" selection-end-line="302" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-actuator/2.1.2.RELEASE/spring-boot-actuator-2.1.2.RELEASE.jar!/org/springframework/boot/actuate/health/Health.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="113" column="20" selection-start-line="113" selection-start-column="20" selection-end-line="113" selection-end-column="20" />
+          <folding>
+            <element signature="e#941#942#0" expanded="true" />
+            <element signature="e#976#977#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/hazelcast/hazelcast/3.11.1/hazelcast-3.11.1.jar!/com/hazelcast/core/IQueue.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/hazelcast/hazelcast/3.11.1/hazelcast-3.11.1.jar!/com/hazelcast/core/HazelcastInstance.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-config/src/main/java/com/athul/common/client/CacheController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/5.1.4.RELEASE/spring-test-5.1.4.RELEASE.jar!/org/springframework/test/web/servlet/result/MockMvcResultMatchers.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="88" column="40" selection-start-line="88" selection-start-column="40" selection-end-line="88" selection-end-column="40" />
+          <folding>
+            <element signature="e#3289#3290#0" expanded="true" />
+            <element signature="e#3339#3340#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-config/src/main/java/com/athul/common/client/QueueController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="226" column="48" selection-start-line="226" selection-start-column="40" selection-end-line="226" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-config/common-config.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2229" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hazelcast-client-1/src/test/java/com/athul/AllTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hazelcast-client-1/hazelcast-client-1.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hazelcast-client-2/src/test/java/com/athul/hazelcastclient2/AllTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-config/src/test/java/com/athul/common/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="104" selection-start-line="12" selection-start-column="104" selection-end-line="12" selection-end-column="104" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-config/src/test/java/com/athul/common/client/CacheControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-config/src/test/java/com/athul/common/client/ClientConfigurationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-config/src/test/java/com/athul/common/client/QueueControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/hazelcast/hazelcast/3.11.1/hazelcast-3.11.1.jar!/com/hazelcast/config/Config.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3225">
+          <caret line="257" column="36" selection-start-line="257" selection-start-column="36" selection-end-line="257" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-config/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="59" column="55" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/hazelcast/hazelcast/3.11.1/hazelcast-3.11.1.jar!/com/hazelcast/core/Cluster.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/collections/eclipse-collections-api/9.2.0/eclipse-collections-api-9.2.0.jar!/org/eclipse/collections/api/set/MutableSet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/hazelcast/hazelcast/3.11.1/hazelcast-3.11.1.jar!/com/hazelcast/nio/Address.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/hazelcast/hazelcast/3.11.1/hazelcast-3.11.1.jar!/com/hazelcast/core/Member.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-config/src/main/java/com/athul/common/client/ClientConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-config/src/main/java/com/athul/common/server/ServerConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="749">
+          <caret line="87" column="90" selection-start-line="87" selection-start-column="90" selection-end-line="87" selection-end-column="90" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/src.zip!/java/net/InetAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1469" column="30" selection-start-line="1469" selection-start-column="30" selection-end-line="1469" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-config/src/test/java/com/athul/AllTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/collections/eclipse-collections-api/9.2.0/eclipse-collections-api-9.2.0.jar!/org/eclipse/collections/api/block/function/Function.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/collections/eclipse-collections-api/9.2.0/eclipse-collections-api-9.2.0.jar!/org/eclipse/collections/api/block/predicate/Predicate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/collections/eclipse-collections/9.2.0/eclipse-collections-9.2.0.jar!/org/eclipse/collections/impl/utility/internal/IteratorIterate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="209" selection-start-line="209" selection-end-line="209" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/collections/eclipse-collections/9.2.0/eclipse-collections-9.2.0.jar!/org/eclipse/collections/impl/utility/internal/IterableIterate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="132" selection-start-line="132" selection-end-line="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-config/src/test/java/com/athul/common/server/ServerConfigurationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-788">
+          <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-config/src/main/java/com/athul/common/server/HazelcastHealth.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="79" column="38" selection-start-line="79" selection-start-column="38" selection-end-line="79" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-config/src/test/java/com/athul/common/server/HazelcastHealthTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="162" column="9" lean-forward="true" selection-start-line="162" selection-start-column="9" selection-end-line="162" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -791,6 +1408,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>common-config:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -802,6 +1420,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
+          <last-edited>Spring</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -836,12 +1455,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>hazelcast-server-1</last-edited>
+          <last-edited>common-config</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -861,6 +1479,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
