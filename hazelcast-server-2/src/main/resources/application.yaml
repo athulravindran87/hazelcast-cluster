@@ -18,6 +18,20 @@ eureka:
     status-page-url: http://${eureka.instance.hostname}:${server.port}/actuator/info
     health-check-url: http://${eureka.instance.hostname}:${server.port}/actuator/health
     home-page-url: http://${eureka.instance.hostname}:${server.port}/actuator/env
-    appname: ${spring.application.name}
+    appname: hazelcast-server
+    virtual-host-name: hazelcast-server
 
 
+endpoints:
+  health.sensitive: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+  info:
+    git:
+      mode: full
