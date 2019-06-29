@@ -30,6 +30,7 @@ import java.util.Map;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasEntry;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThat;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.mock;
@@ -79,8 +80,8 @@ public class HazelcastHealthTest extends BaseTest
         PowerMockito.mockStatic(GroupConfig.class);
         PowerMockito.mockStatic(Address.class);
 
-        members.add(member);
         addresses.add(inetAddress);
+        members.add(member);
         when(hazelcastInstance.getMap("somename")).thenReturn(map);
         when(hazelcastInstance.getDistributedObjects()).thenReturn(Collections.singleton(distributedObject));
         when(hazelcastInstance.getConfig().getGroupConfig()).thenReturn(mock(GroupConfig.class));
@@ -143,6 +144,7 @@ public class HazelcastHealthTest extends BaseTest
     @Test
     public void testClusterDetails() throws Exception
     {
+
         Map<String,Object> result = (Map <String, Object>) testObj.clusterDetails(hazelcastInstance);
 
         assertThat(result.size(),equalTo(4));
@@ -161,10 +163,12 @@ public class HazelcastHealthTest extends BaseTest
 
     }
 
+
     @Test
     public void testCacheStats() throws Exception
     {
 
+        when(member.getAddress()).thenReturn(address);
         when(hazelcastInstance.getMap(anyString())).thenReturn(map);
         when(map.getLocalMapStats()).thenReturn(localMapStats);
 
@@ -172,4 +176,14 @@ public class HazelcastHealthTest extends BaseTest
 
         assertThat(result, hasEntry("somename", localMapStats));
     }
+
+
+    @Test
+    public void testgetAddressException() throws Exception
+    {
+        PowerMockito.when(member.getAddress()).thenReturn(null);
+
+        assertNull(testObj.getInetAddress(member));
+    }
+
 }

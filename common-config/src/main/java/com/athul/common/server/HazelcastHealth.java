@@ -14,7 +14,6 @@ import org.springframework.boot.actuate.health.HealthIndicator;
 import org.springframework.stereotype.Component;
 
 import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -62,15 +61,15 @@ public class HazelcastHealth implements HealthIndicator
         return clusters;
     }
 
-    private InetAddress getInetAddress(Member member)
+    protected InetAddress getInetAddress(Member member)
     {
         try
         {
             return member.getAddress().getInetAddress();
         }
-        catch(UnknownHostException e)
+        catch(Exception e)
         {
-            log.error("Unable to get InetAddress for host {}", member.getAddress().getHost());
+            log.error("Unable to get InetAddress for host", e);
         }
         return null;
     }
