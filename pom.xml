@@ -180,10 +180,10 @@
                 <artifactId>git-commit-id-plugin</artifactId>
             </plugin>
 
-         <!--   <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-project-info-reports-plugin</artifactId>
-            </plugin>-->
+            <!--   <plugin>
+                   <groupId>org.apache.maven.plugins</groupId>
+                   <artifactId>maven-project-info-reports-plugin</artifactId>
+               </plugin>-->
 
 
         </plugins>
@@ -298,36 +298,39 @@
                         <verbose>false</verbose>
                         <dateFormat>yyyy-MM-dd'T'HH:mm:ss2</dateFormat>
                         <generateGitPropertiesFile>true</generateGitPropertiesFile>
-                        <generateGitPropertiesFilename>${project.build.outputDirectory}/git.properties</generateGitPropertiesFilename>
+                        <generateGitPropertiesFilename>${project.build.outputDirectory}/git.properties
+                        </generateGitPropertiesFilename>
                         <failOnUnableToExtractRepoInfo>false</failOnUnableToExtractRepoInfo>
                     </configuration>
                 </plugin>
 
-               <!-- <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-project-info-reports-plugin</artifactId>
-                    <version>3.0.0</version>
-                </plugin>-->
+                <!-- <plugin>
+                     <groupId>org.apache.maven.plugins</groupId>
+                     <artifactId>maven-project-info-reports-plugin</artifactId>
+                     <version>3.0.0</version>
+                 </plugin>-->
 
             </plugins>
         </pluginManagement>
     </build>
 
-    <!--<profiles>
+    <profiles>
         <profile>
             <id>pitest</id>
-            <plugins>
-                <plugin>
-                    <groupId>org.pitest</groupId>
-                    <artifactId>pitest-maven</artifactId>
-                    <configuration>
-                        <mutationThreshold>90</mutationThreshold>
-                        <coverageThreshold>95</coverageThreshold>
-                    </configuration>
-                </plugin>
-            </plugins>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.pitest</groupId>
+                        <artifactId>pitest-maven</artifactId>
+                        <configuration>
+                            <mutationThreshold>90</mutationThreshold>
+                            <coverageThreshold>95</coverageThreshold>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
-    </profiles>-->
+    </profiles>
 
     <repositories>
         <repository>
