@@ -29,7 +29,7 @@ public class HazelcastHealth implements HealthIndicator
         {
             HazelcastInstance hazelcastInstance = Hazelcast.getAllHazelcastInstances().stream().findAny().orElse(null);
 
-            if(hazelcastInstance == null || ! hazelcastInstance.getLifecycleService().isRunning())
+            if(! hazelcastInstance.getLifecycleService().isRunning())
             {
                 return Health.down().withDetail("Hazelcast-node", "No hazelcast server instances are running").build();
             }
