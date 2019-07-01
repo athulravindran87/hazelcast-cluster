@@ -17,6 +17,7 @@ import java.net.InetAddress;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 @Component
 @Slf4j
@@ -29,7 +30,7 @@ public class HazelcastHealth implements HealthIndicator
         {
             HazelcastInstance hazelcastInstance = Hazelcast.getAllHazelcastInstances().stream().findAny().orElse(null);
 
-            if(! hazelcastInstance.getLifecycleService().isRunning())
+            if(!Objects.isNull(hazelcastInstance) && ! hazelcastInstance.getLifecycleService().isRunning())
             {
                 return Health.down().withDetail("Hazelcast-node", "No hazelcast server instances are running").build();
             }
