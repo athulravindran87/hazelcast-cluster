@@ -10,9 +10,9 @@ Hazelcast Cluster using EurekaOneDiscovery
 1) Eureka Discovery Service.	         	             
 2) EurekaOneDiscovery api                            
 3) Hazelcast                                         
-4) Spring Boot 2 					   												 
-								   														
-![hazelcast-server](https://user-images.githubusercontent.com/5833938/60469796-03566b00-9c2c-11e9-8afa-6a1231c8a65e.jpg)
+4) Spring Boot 2 					   							
+
+![hazelcast-server (1)](https://user-images.githubusercontent.com/5833938/60470199-9643d500-9c2d-11e9-913e-0f40d21fc911.jpg)
 
 | Service Name        | port | Comments                       |  
 | ------------------- | -----| -------------------------------|
