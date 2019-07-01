@@ -31,7 +31,7 @@ public class ClientConfiguration
     @Bean("clientConfig")
     public ClientConfig hazelcastConfig() {
 
-        ClientConfig config = new ClientConfig()
+        return new ClientConfig()
                 .setProperty("hazelcast.logging.type", "slf4j")
                 .setProperty("hazelcast.jmx","true")
                 .setProperty("hazelcast.discovery.enabled", Boolean.toString(true))
@@ -41,7 +41,6 @@ public class ClientConfiguration
                 .setNetworkConfig(getClientNetworkConfig())
                 .setConnectionStrategyConfig(clientConnectionStrategyConfig());
 
-        return config;
     }
 
     private ClientNetworkConfig getClientNetworkConfig() {

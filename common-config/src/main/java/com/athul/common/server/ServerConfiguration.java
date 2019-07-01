@@ -26,8 +26,7 @@ public class ServerConfiguration
     public HazelcastInstance hazelcastInstance(@Autowired Config hazelcastConfig)
     {
         log.info("Hazelcast instance {}", hazelcastConfig.getInstanceName());
-        HazelcastInstance hazelcastInstance = Hazelcast.getOrCreateHazelcastInstance(hazelcastConfig);
-        return hazelcastInstance;
+        return Hazelcast.getOrCreateHazelcastInstance(hazelcastConfig);
     }
 
     @Bean

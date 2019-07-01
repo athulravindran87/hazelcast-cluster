@@ -180,10 +180,10 @@
                 <artifactId>git-commit-id-plugin</artifactId>
             </plugin>
 
-            <!--   <plugin>
+               <plugin>
                    <groupId>org.apache.maven.plugins</groupId>
                    <artifactId>maven-project-info-reports-plugin</artifactId>
-               </plugin>-->
+               </plugin>
 
 
         </plugins>
@@ -304,11 +304,11 @@
                     </configuration>
                 </plugin>
 
-                <!-- <plugin>
+                 <plugin>
                      <groupId>org.apache.maven.plugins</groupId>
                      <artifactId>maven-project-info-reports-plugin</artifactId>
                      <version>3.0.0</version>
-                 </plugin>-->
+                 </plugin>
 
             </plugins>
         </pluginManagement>

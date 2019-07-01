@@ -4,10 +4,7 @@ import com.hazelcast.core.HazelcastInstance;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/queue")
@@ -20,16 +17,16 @@ public class QueueController
     private HazelcastInstance data;
 
 
-    @RequestMapping(value = "/get", method = RequestMethod.GET)
-    public String getData() throws Exception
+    @GetMapping(value = "/get")
+    public String getData() throws InterruptedException
     {
         String result =  (String)this.data.getQueue("test-queue").take();
         log.info("Result from queue is {}",result);
         return result;
     }
 
-    @RequestMapping(value = "/put", method = RequestMethod.POST)
-    public void putData(@RequestParam String value) throws Exception
+    @PostMapping(value = "/put")
+    public void putData(@RequestParam String value) throws InterruptedException
     {
         this.data.getQueue("test-queue").put(value);
     }

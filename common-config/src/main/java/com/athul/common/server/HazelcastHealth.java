@@ -80,7 +80,7 @@ public class HazelcastHealth implements HealthIndicator
        return CollectionAdapter.adapt(
                 hazelcastInstance.getDistributedObjects()).select(
                 distributedObject->distributedObject.getServiceName().endsWith("mapService")).toMap(
-                distributedObject->distributedObject.getName(),
+                DistributedObject::getName,
                 distributedObject->hazelcastInstance.getMap(distributedObject.getName()).getLocalMapStats());
 
 

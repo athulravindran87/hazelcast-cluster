@@ -4,10 +4,7 @@ import com.hazelcast.core.HazelcastInstance;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
@@ -21,7 +18,7 @@ public class CacheController
     @Qualifier("dsHzInstance")
     private HazelcastInstance data;
 
-    @RequestMapping(value = "/get", method = RequestMethod.GET)
+    @GetMapping(value = "/get")
     public String getData(@RequestParam String key)
     {
         String result =  Optional.ofNullable(this.data.<Object,String>getMap("test-map").get(key)).get();
@@ -29,7 +26,7 @@ public class CacheController
         return result;
     }
 
-    @RequestMapping(value = "/put", method = RequestMethod.POST)
+    @PostMapping(value = "/put")
     public void putData(@RequestParam String key, @RequestParam String value)
     {
         this.data.getMap("test-map").put(key,value);
