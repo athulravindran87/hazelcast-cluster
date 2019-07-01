@@ -6,13 +6,13 @@ Hazelcast Cluster using EurekaOneDiscovery
 
 ### This project is an experiment to set up Hazelcast clustering using Eureka as Discovery service. 
 
-## **Technical Stack**:
-
-1) Eureka Discovery Service.
-2) EurekaOneDiscovery api
-3) Hazelcast
-4) Spring Boot
-
+## **Technical Stack**:                   	         
+1) Eureka Discovery Service.	         	             
+2) EurekaOneDiscovery api                            
+3) Hazelcast                                         
+4) Spring Boot 2 					   												 
+								   														
+![hazelcast-server](https://user-images.githubusercontent.com/5833938/60469796-03566b00-9c2c-11e9-8afa-6a1231c8a65e.jpg)
 
 | Service Name        | port | Comments                       |  
 | ------------------- | -----| -------------------------------|
