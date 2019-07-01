@@ -23,6 +23,9 @@ import java.util.Objects;
 @Slf4j
 public class HazelcastHealth implements HealthIndicator
 {
+
+    public static final String HAZELCAST_NODE = "Hazelcast-node";
+
     @Override
     public Health health()
     {
@@ -32,11 +35,11 @@ public class HazelcastHealth implements HealthIndicator
 
             if(Objects.isNull(hazelcastInstance))
             {
-                return Health.down().withDetail("Hazelcast-node", "No hazelcast server exists").build();
+                return Health.down().withDetail(HAZELCAST_NODE, "No hazelcast server exists").build();
             }
             if(! hazelcastInstance.getLifecycleService().isRunning())
             {
-                return Health.down().withDetail("Hazelcast-node", "No hazelcast server instances are running").build();
+                return Health.down().withDetail(HAZELCAST_NODE, "No hazelcast server instances are running").build();
             }
 
             Collection <DistributedObject> distributedObjects = hazelcastInstance.getDistributedObjects();
@@ -49,12 +52,12 @@ public class HazelcastHealth implements HealthIndicator
         }
         catch(Exception e)
         {
-            return Health.down().withDetail("Hazelcast-node", "Error while checking health").build();
+            return Health.down().withDetail(HAZELCAST_NODE, "Error while checking health").build();
         }
 
     }
 
-    protected Object clusterDetails(HazelcastInstance instance) throws Exception
+    protected Object clusterDetails(HazelcastInstance instance)
     {
         Map <String, Object> clusters = new HashMap <>();
 

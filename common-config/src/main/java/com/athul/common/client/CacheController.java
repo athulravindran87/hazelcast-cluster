@@ -6,8 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
-
 @RestController
 @RequestMapping(value = "/map")
 @Slf4j
@@ -21,7 +19,7 @@ public class CacheController
     @GetMapping(value = "/get")
     public String getData(@RequestParam String key)
     {
-        String result =  Optional.ofNullable(this.data.<Object,String>getMap("test-map").get(key)).get();
+        String result =  this.data.<Object,String>getMap("test-map").get(key);
         log.info("Result from cache is {}",result);
         return result;
     }
