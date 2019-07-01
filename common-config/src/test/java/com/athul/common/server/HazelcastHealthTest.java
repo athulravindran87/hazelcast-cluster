@@ -105,7 +105,20 @@ public class HazelcastHealthTest extends BaseTest
     @Test
     public void healthWithNoInstance()
     {
-        PowerMockito.when(Hazelcast.getAllHazelcastInstances()).thenReturn(null);
+        PowerMockito.when(Hazelcast.getAllHazelcastInstances()).thenReturn(Sets.mutable.empty());
+
+        assertThat(testObj.health().getStatus(), equalTo(Status.DOWN));
+        assertThat(testObj.health().getDetails(),
+                hasEntry("Hazelcast-node",
+                        "No hazelcast server exists"));
+    }
+
+    @Test
+    public void healthWithException()
+    {
+        PowerMockito.when(Hazelcast.getAllHazelcastInstances()).thenReturn(Collections.singleton(hazelcastInstance));
+
+        when(hazelcastInstance.getLifecycleService().isRunning()).thenThrow(RuntimeException.class);
 
         assertThat(testObj.health().getStatus(), equalTo(Status.DOWN));
         assertThat(testObj.health().getDetails(),
