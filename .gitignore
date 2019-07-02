@@ -7,5 +7,4 @@
 *.iws
 *.iml
 *.ipr
-.idea/
-.mvn/
+.mvn
