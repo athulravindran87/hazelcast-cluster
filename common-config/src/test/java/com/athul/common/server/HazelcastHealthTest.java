@@ -10,7 +10,6 @@ import com.hazelcast.version.Version;
 import org.eclipse.collections.api.map.MutableMap;
 import org.eclipse.collections.api.set.MutableSet;
 import org.eclipse.collections.impl.factory.Sets;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,7 +22,6 @@ import org.powermock.modules.junit4.PowerMockRunner;
 import org.springframework.boot.actuate.health.Status;
 
 import java.net.InetAddress;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Map;
@@ -71,7 +69,6 @@ public class HazelcastHealthTest extends BaseTest
 
     private HashSet<Member> members = new HashSet <>();
     private MutableSet <InetAddress> addresses = Sets.mutable.empty();
-    private ArrayList<LocalMapStats> localMapStatsArrayList = new ArrayList <>();
 
     @Before
     public void setUp() throws Exception
@@ -95,11 +92,6 @@ public class HazelcastHealthTest extends BaseTest
         when(hazelcastInstance.getConfig().getGroupConfig()).thenReturn(groupConfig);
         when(groupConfig.getName()).thenReturn("hz_cluster");
 
-    }
-
-    @After
-    public void tearDown() throws Exception
-    {
     }
 
     @Test
