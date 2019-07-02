@@ -1,5 +1,0 @@
-com/athul/common/client/QueueController.class
-com/athul/common/client/ClientConfiguration.class
-com/athul/common/server/ServerConfiguration.class
-com/athul/common/server/HazelcastHealth.class
-com/athul/common/client/CacheController.class

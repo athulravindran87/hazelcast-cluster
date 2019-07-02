@@ -1,6 +1,0 @@
-GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-common-config,com.athul.common.client,ClientConfiguration,0,90,0,0,0,26,0,7,0,7
-common-config,com.athul.common.client,CacheController,0,32,0,0,0,7,0,4,0,4
-common-config,com.athul.common.client,QueueController,0,27,0,0,0,7,0,4,0,4
-common-config,com.athul.common.server,HazelcastHealth,9,122,1,3,3,25,1,10,0,9
-common-config,com.athul.common.server,ServerConfiguration,0,196,0,0,0,41,0,7,0,7
