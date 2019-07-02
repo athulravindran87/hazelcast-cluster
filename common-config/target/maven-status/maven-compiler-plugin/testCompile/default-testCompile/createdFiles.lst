@@ -1,0 +1,7 @@
+com/athul/common/client/ClientConfigurationTest.class
+com/athul/common/BaseTest.class
+com/athul/common/client/CacheControllerTest.class
+com/athul/common/client/QueueControllerTest.class
+com/athul/common/server/ServerConfigurationTest.class
+com/athul/common/server/HazelcastHealthTest.class
+com/athul/AllTests.class

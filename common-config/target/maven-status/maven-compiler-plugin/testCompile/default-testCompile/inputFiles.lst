@@ -1,0 +1,7 @@
+/Users/Athul/dev/hazelcast-cluster/common-config/src/test/java/com/athul/common/client/QueueControllerTest.java
+/Users/Athul/dev/hazelcast-cluster/common-config/src/test/java/com/athul/common/client/CacheControllerTest.java
+/Users/Athul/dev/hazelcast-cluster/common-config/src/test/java/com/athul/AllTests.java
+/Users/Athul/dev/hazelcast-cluster/common-config/src/test/java/com/athul/common/server/ServerConfigurationTest.java
+/Users/Athul/dev/hazelcast-cluster/common-config/src/test/java/com/athul/common/client/ClientConfigurationTest.java
+/Users/Athul/dev/hazelcast-cluster/common-config/src/test/java/com/athul/common/BaseTest.java
+/Users/Athul/dev/hazelcast-cluster/common-config/src/test/java/com/athul/common/server/HazelcastHealthTest.java

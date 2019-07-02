@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>HazelcastHealth.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">common-config</a> &gt; <a href="index.source.html" class="el_package">com.athul.common.server</a> &gt; <span class="el_source">HazelcastHealth.java</span></div><h1>HazelcastHealth.java</h1><pre class="source lang-java linenums">package com.athul.common.server;
+
+import com.hazelcast.core.DistributedObject;
+import com.hazelcast.core.Hazelcast;
+import com.hazelcast.core.HazelcastInstance;
+import com.hazelcast.core.Member;
+import com.hazelcast.monitor.LocalMapStats;
+import lombok.extern.slf4j.Slf4j;
+import org.eclipse.collections.api.map.MutableMap;
+import org.eclipse.collections.impl.collection.mutable.CollectionAdapter;
+import org.eclipse.collections.impl.factory.Sets;
+import org.springframework.boot.actuate.health.Health;
+import org.springframework.boot.actuate.health.HealthIndicator;
+import org.springframework.stereotype.Component;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+
+@Component
+<span class="fc" id="L23">@Slf4j</span>
+<span class="fc" id="L24">public class HazelcastHealth implements HealthIndicator</span>
+{
+    @Override
+    public Health health()
+    {
+        try
+        {
+<span class="fc" id="L31">            HazelcastInstance hazelcastInstance = Hazelcast.getAllHazelcastInstances().stream().findAny().orElse(null);</span>
+
+<span class="pc bpc" id="L33" title="1 of 4 branches missed.">            if(hazelcastInstance == null || ! hazelcastInstance.getLifecycleService().isRunning())</span>
+            {
+<span class="fc" id="L35">                return Health.down().withDetail(&quot;Hazelcast-node&quot;, &quot;No hazelcast server instances are running&quot;).build();</span>
+            }
+
+<span class="fc" id="L38">            Collection &lt;DistributedObject&gt; distributedObjects = hazelcastInstance.getDistributedObjects();</span>
+
+<span class="fc" id="L40">            return Health.up()</span>
+<span class="fc" id="L41">                    .withDetail(&quot;Cluster_Details &quot;, clusterDetails(hazelcastInstance))</span>
+<span class="fc" id="L42">                    .withDetail(&quot;All Objects &quot;, distributedObjects.stream().map(DistributedObject::getName))</span>
+<span class="fc" id="L43">                    .withDetail(&quot;Caches&quot;,cacheStats(hazelcastInstance))</span>
+<span class="fc" id="L44">                    .build();</span>
+        }
+<span class="fc" id="L46">        catch(Exception e)</span>
+        {
+<span class="fc" id="L48">            return Health.down().withDetail(&quot;Hazelcast-node&quot;, &quot;Error while checking health&quot;).build();</span>
+        }
+
+    }
+
+    protected Object clusterDetails(HazelcastInstance instance) throws Exception
+    {
+<span class="fc" id="L55">        Map &lt;String, Object&gt; clusters = new HashMap &lt;&gt;();</span>
+
+<span class="fc" id="L57">        clusters.put(&quot;Name&quot;, instance.getConfig().getGroupConfig().getName());</span>
+<span class="fc" id="L58">        clusters.put(&quot;State&quot;, instance.getCluster().getClusterState());</span>
+<span class="fc" id="L59">        clusters.put(&quot;Version&quot;, instance.getCluster().getClusterVersion());</span>
+<span class="fc" id="L60">        clusters.put(&quot;Cluster Members&quot;, Sets.adapt(instance.getCluster().getMembers()).collect(this::getInetAddress));</span>
+
+<span class="fc" id="L62">        return clusters;</span>
+    }
+
+    private InetAddress getInetAddress(Member member)
+    {
+        try
+        {
+<span class="fc" id="L69">            return member.getAddress().getInetAddress();</span>
+        }
+<span class="nc" id="L71">        catch(UnknownHostException e)</span>
+        {
+<span class="nc" id="L73">            log.error(&quot;Unable to get InetAddress for host {}&quot;, member.getAddress().getHost());</span>
+        }
+<span class="nc" id="L75">        return null;</span>
+    }
+
+    protected MutableMap &lt;String, LocalMapStats&gt;  cacheStats(HazelcastInstance hazelcastInstance)
+    {
+<span class="fc" id="L80">       return CollectionAdapter.adapt(</span>
+<span class="fc" id="L81">                hazelcastInstance.getDistributedObjects()).select(</span>
+<span class="fc" id="L82">                distributedObject-&gt;distributedObject.getServiceName().endsWith(&quot;mapService&quot;)).toMap(</span>
+<span class="fc" id="L83">                distributedObject-&gt;distributedObject.getName(),</span>
+<span class="fc" id="L84">                distributedObject-&gt;hazelcastInstance.getMap(distributedObject.getName()).getLocalMapStats());</span>
+
+
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span></div></body></html>
