@@ -4,6 +4,11 @@ server:
 
 eureka:
   instance:
+    appname: ${spring.application.name}
+    virtual-host-name: ${spring.application.name}
+    ip-address: ${spring.cloud.client.ip-address}
+    hostname: ${spring.cloud.client.ip-address}
+    non-secure-port: 8761
     preferIpAddress: true
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 10

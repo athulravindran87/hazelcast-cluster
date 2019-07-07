@@ -14,14 +14,20 @@ eureka:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
     healthcheck:
       enabled: true
+    registry-fetch-interval-seconds: 5
+    eureka-connection-idle-timeout-seconds: 45
   instance:
+    appname: hazelcast-server
+    virtual-host-name: hazelcast-server
+    ip-address: ${spring.cloud.client.ip-address}
+    hostname: ${spring.cloud.client.ip-address}
+    non-secure-port: 8762
     preferIpAddress: true
-    hostname: localhost
     status-page-url: http://${eureka.instance.hostname}:${server.port}/actuator/info
     health-check-url: http://${eureka.instance.hostname}:${server.port}/actuator/health
     home-page-url: http://${eureka.instance.hostname}:${server.port}/actuator/env
-    appname: hazelcast-server
-    virtual-host-name: hazelcast-server
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 30
 
 endpoints:
   health.sensitive: false
