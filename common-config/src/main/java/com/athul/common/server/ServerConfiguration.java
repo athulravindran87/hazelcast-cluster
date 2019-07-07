@@ -22,6 +22,9 @@ public class ServerConfiguration
     @Value("${hazelcast.port:5701}")
     private int portNumber;
 
+    @Value("${spring.cloud.client.ip-address}")
+    private String hostName;
+
     @Bean("hzServerInstance")
     public HazelcastInstance hazelcastInstance(@Autowired Config hazelcastConfig)
     {
@@ -42,7 +45,7 @@ public class ServerConfiguration
         config.setProperty("hazelcast.discovery.enabled", "true");
         config.setProperty("hazelcast.discovery.public.ip.enabled", "true");
         config.setNetworkConfig(
-                new NetworkConfig().setPublicAddress("localhost:" + portNumber).setPort(portNumber).setReuseAddress(
+                new NetworkConfig().setPublicAddress(hostName+":" + portNumber).setPort(portNumber).setReuseAddress(
                         true).addOutboundPort(0).setPortAutoIncrement(true).setJoin(createJoin()).setInterfaces(
                         new InterfacesConfig().setEnabled(false).addInterface("10.10.1.*")));
 

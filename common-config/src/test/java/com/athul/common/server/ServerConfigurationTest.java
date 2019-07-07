@@ -42,6 +42,7 @@ public class ServerConfigurationTest extends BaseTest
     public void setUp() throws Exception
     {
         ReflectionTestUtils.setField(testObj, "portNumber", 5701);
+        ReflectionTestUtils.setField(testObj, "hostName", "192.168.2.0");
         PowerMockito.mockStatic(Hazelcast.class);
         PowerMockito.mockStatic(EurekaOneDiscoveryStrategyFactory.class);
 
@@ -90,7 +91,7 @@ public class ServerConfigurationTest extends BaseTest
 
         assertThat(result.getNetworkConfig(), instanceOf(NetworkConfig.class));
 
-        assertThat(result.getNetworkConfig().getPublicAddress(), equalTo("localhost:5701"));
+        assertThat(result.getNetworkConfig().getPublicAddress(), equalTo("192.168.2.0:5701"));
         assertThat(result.getNetworkConfig().getPort(), equalTo(5701));
         assertThat(result.getNetworkConfig().isReuseAddress(), equalTo(true));
         assertThat(result.getNetworkConfig().isPortAutoIncrement(), equalTo(true));

@@ -68,7 +68,7 @@ public class HazelcastHealthTest extends BaseTest
 
 
     private HashSet<Member> members = new HashSet <>();
-    private MutableSet <InetAddress> addresses = Sets.mutable.empty();
+    private MutableSet <Address> addresses = Sets.mutable.empty();
 
     @Before
     public void setUp() throws Exception
@@ -77,7 +77,7 @@ public class HazelcastHealthTest extends BaseTest
         PowerMockito.mockStatic(GroupConfig.class);
         PowerMockito.mockStatic(Address.class);
 
-        addresses.add(inetAddress);
+        addresses.add(address);
         members.add(member);
         when(hazelcastInstance.getMap("somename")).thenReturn(map);
         when(hazelcastInstance.getDistributedObjects()).thenReturn(Collections.singleton(distributedObject));
@@ -161,7 +161,7 @@ public class HazelcastHealthTest extends BaseTest
                 hasEntry("State", ClusterState.ACTIVE));
 
         assertThat(result,
-                hasEntry("Cluster Members", addresses));
+                hasEntry("Cluster Members", addresses.toString()));
 
         assertThat(result,
                 hasEntry("Name", "hz_cluster"));

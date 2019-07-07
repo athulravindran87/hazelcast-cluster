@@ -5,6 +5,7 @@ import com.hazelcast.core.Hazelcast;
 import com.hazelcast.core.HazelcastInstance;
 import com.hazelcast.core.Member;
 import com.hazelcast.monitor.LocalMapStats;
+import com.hazelcast.nio.Address;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.collections.api.map.MutableMap;
 import org.eclipse.collections.impl.collection.mutable.CollectionAdapter;
@@ -13,7 +14,6 @@ import org.springframework.boot.actuate.health.Health;
 import org.springframework.boot.actuate.health.HealthIndicator;
 import org.springframework.stereotype.Component;
 
-import java.net.InetAddress;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -64,16 +64,16 @@ public class HazelcastHealth implements HealthIndicator
         clusters.put("Name", instance.getConfig().getGroupConfig().getName());
         clusters.put("State", instance.getCluster().getClusterState());
         clusters.put("Version", instance.getCluster().getClusterVersion());
-        clusters.put("Cluster Members", Sets.adapt(instance.getCluster().getMembers()).collect(this::getInetAddress));
+        clusters.put("Cluster Members", Sets.adapt(instance.getCluster().getMembers()).collect(this::getInetAddress).toString());
 
         return clusters;
     }
 
-    protected InetAddress getInetAddress(Member member)
+    protected Address getInetAddress(Member member)
     {
         try
         {
-            return member.getAddress().getInetAddress();
+            return member.getAddress();
         }
         catch(Exception e)
         {
