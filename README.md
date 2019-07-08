@@ -20,7 +20,7 @@ Hazelcast Cluster using EurekaOneDiscovery
 | hazelcast-server-1  | 8762 | hazelcast server instance 1.   |
 | hazelcast-server-2  | 8763 | hazelcast server instance 2.   |
 | hazelcast-client-1  | 8764 | hazelcast client instance 1.   |
-| hazelcast-client-2  | 8765 | hazelcast client instance 1.   |
+| hazelcast-client-2  | 8765 | hazelcast client instance 2.   |
 
 
 

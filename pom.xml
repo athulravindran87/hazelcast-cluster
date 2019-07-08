@@ -12,7 +12,7 @@
 
     <groupId>com.athul</groupId>
     <artifactId>hazelcast-cluster</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1-SNAPSHOT</version>
     <name>hazelcast-cluster</name>
     <packaging>pom</packaging>
     <description>Hazelcast Cluster using Eureka Discovery</description>
@@ -30,10 +30,8 @@
     <modules>
         <module>common-config</module>
         <module>discovery-server</module>
-        <module>hazelcast-server-1</module>
-        <module>hazelcast-server-2</module>
-        <module>hazelcast-client-1</module>
-        <module>hazelcast-client-2</module>
+        <module>hazelcast-server</module>
+        <module>hazelcast-client</module>
     </modules>
 
     <dependencies>

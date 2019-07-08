@@ -7,11 +7,12 @@
         <artifactId>hazelcast-cluster</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
+
     <groupId>com.athul</groupId>
-    <artifactId>discovery-server</artifactId>
+    <artifactId>hazelcast-server</artifactId>
     <version>0.1-SNAPSHOT</version>
-    <name>discovery-server</name>
-    <description>Eureka Discovery Server</description>
+    <name>hazelcast-server</name>
+    <description>Hazelcast Server</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -21,7 +22,7 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
         <dependency>
@@ -29,6 +30,31 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+
+        <dependency>
+            <groupId>com.hazelcast</groupId>
+            <artifactId>hazelcast-eureka-one</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.hazelcast</groupId>
+            <artifactId>hazelcast-eureka-one</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.hazelcast</groupId>
+            <artifactId>hazelcast-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.athul</groupId>
+            <artifactId>common-config</artifactId>
+            <version>0.1-SNAPSHOT</version>
+        </dependency>
+
+
+
     </dependencies>
 
     <dependencyManagement>

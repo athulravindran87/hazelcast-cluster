@@ -1,0 +1,78 @@
+version: '3.7'
+services:
+  eureka-server:
+    image: discovery-server-v4
+    container_name: discovery-server
+    build:
+      context: ./discovery-server
+      dockerfile: deploy/Dockerfile
+    ports:
+      - "8761:8761"
+
+  hazelcast-server-1:
+    image: hazelcast-server-1-v4
+    container_name: hazelcast-server-1
+    build:
+      context: ./hazelcast-server
+      dockerfile: deploy/Dockerfile
+    ports:
+      - "8762:8762"
+    depends_on:
+      - eureka-server
+    environment:
+      EUREKA_URI: http://eureka-server:8761/eureka
+      hazelcast.port: 5701
+    links:
+      - eureka-server:eureka-server
+
+  hazelcast-server-2:
+    image: hazelcast-server-1-v4
+    container_name: hazelcast-server-2
+    build:
+      context: ./hazelcast-server
+      dockerfile: deploy/Dockerfile
+    ports:
+      - "8763:8762"
+    depends_on:
+      - eureka-server
+    environment:
+      EUREKA_URI: http://eureka-server:8761/eureka
+      hazelcast.port: 5702
+    links:
+      - eureka-server:eureka-server
+
+#  hazelcast-client-1:
+#    image: hazelcast-client-1-v4
+#    container_name: hazelcast-client-1
+#    build:
+#      context: ./hazelcast-client
+#      dockerfile: deploy/Dockerfile
+#    ports:
+#      - "8764:8764"
+#    depends_on:
+#      - eureka-server
+#      - hazelcast-server-1
+#      - hazelcast-server-2
+#    environment:
+#      EUREKA_URI: http://eureka-server:8761/eureka
+#      eureka.client.props: eureka-client-docker
+#    links:
+#      - eureka-server:eureka-server
+#
+#  hazelcast-client-2:
+#    image: hazelcast-client-1-v4
+#    container_name: hazelcast-client-2
+#    build:
+#      context: ./hazelcast-client
+#      dockerfile: deploy/Dockerfile
+#    ports:
+#      - "8765:8764"
+#    depends_on:
+#      - eureka-server
+#      - hazelcast-server-1
+#      - hazelcast-server-2
+#    environment:
+#      EUREKA_URI: http://eureka-server:8761/eureka
+#      eureka.client.props: eureka-client-docker
+#    links:
+#      - eureka-server:eureka-server

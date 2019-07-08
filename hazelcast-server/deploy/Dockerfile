@@ -7,11 +7,11 @@ LABEL maintainer="athul.ravindran87@gmail.com"
 # Add a volume pointing to /tmp
 VOLUME /usr/app
 
-COPY /target/discovery-server-0.1-SNAPSHOT.jar /tmp/discovery-server.jar
+COPY /target/hazelcast-server-0.1-SNAPSHOT.jar /tmp/hazelcast-server.jar
 
 WORKDIR /tmp
 
-EXPOSE 8761
+EXPOSE 8762
 
 # Run the jar file
-ENTRYPOINT ["java","-jar","discovery-server.jar"]
+ENTRYPOINT ["java","-jar","hazelcast-server.jar"]
