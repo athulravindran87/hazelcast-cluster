@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: hazelcast-server-2
+  labels:
+    app: hazelcast-cluster
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hazelcast-cluster
+    spec:
+      containers:
+        - name: hazelcast-server-2
+          image: gcr.io/hazelcast-cluster/hazelcast-server:v1
+          imagePullPolicy: Always
+          env:
+          - name: EUREKA_URI
+            value: http://eureka:admin@eureka-server:8761/eureka
+          - name: hazelcast.port
+            value: "5702"
+          ports:
+          - containerPort: 8762

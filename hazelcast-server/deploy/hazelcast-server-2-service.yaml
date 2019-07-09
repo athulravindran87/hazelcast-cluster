@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hazelcast-server-2
+spec:
+  selector:
+    app: hazelcast-cluster
+  ports:
+    - protocol: TCP
+      port: 8762
+      targetPort: 8763
+  type: LoadBalancer

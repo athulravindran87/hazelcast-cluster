@@ -1,0 +1,23 @@
+
+
+
+docker build -t gcr.io/hazelcast-cluster/hazelcast-client:v1 -f deploy/Dockerfile .
+gcloud docker -- push  gcr.io/hazelcast-cluster/hazelcast-client:v1
+
+##### Lists ############
+
+kubectl get pods -o wide  - list all pods
+kubectl get deployment - lists all deployments
+kubectl get services - lists all services
+
+
+###### Delete ###########
+
+kubectl delete -f eureka-server-service.yaml
+kubectl delete -f eureka-server-deployment.yaml
+kubectl delete pod hazelcast-client-1-645cb7c9ff-rwspn
+
+##### Create #######
+
+kubectl create -f hazelcast-client-1-service.yaml
+kubectl create -f hazelcast-client-1-deployment.yaml
