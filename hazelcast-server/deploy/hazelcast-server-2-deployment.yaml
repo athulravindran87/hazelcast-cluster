@@ -21,4 +21,4 @@ spec:
           - name: hazelcast.port
             value: "5702"
           ports:
-          - containerPort: 8762
+          - containerPort: 8763

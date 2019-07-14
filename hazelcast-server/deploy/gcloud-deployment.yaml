@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: hazelcast-server-1
-          image: gcr.io/hazelcast-cluster/hazelcast-server:v1
+          image: gcr.io/hazelcast-cluster/hazelcast-server:v2
           imagePullPolicy: Always
           env:
           - name: EUREKA_URI

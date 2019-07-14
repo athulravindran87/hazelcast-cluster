@@ -1,23 +1,56 @@
 
+####Build images and push to GCR (Google Container Registry) #######
 
+cd discovery-server
+docker build -t gcr.io/hazelcast-cluster/discovery-server:v2 -f deploy/Dockerfile .
+docker push  gcr.io/hazelcast-cluster/discovery-server:v2
 
-docker build -t gcr.io/hazelcast-cluster/hazelcast-client:v1 -f deploy/Dockerfile .
-gcloud docker -- push  gcr.io/hazelcast-cluster/hazelcast-client:v1
+cd hazelcast-server
+docker build -t gcr.io/hazelcast-cluster/hazelcast-server:v2 -f deploy/Dockerfile .
+docker push  gcr.io/hazelcast-cluster/hazelcast-server:v2
+
+cd hazelcast-client
+docker build -t gcr.io/hazelcast-cluster/hazelcast-client:v2 -f deploy/Dockerfile .
+docker push  gcr.io/hazelcast-cluster/hazelcast-client:v2
+
 
 ##### Lists ############
 
-kubectl get pods -o wide  - list all pods
-kubectl get deployment - lists all deployments
-kubectl get services - lists all services
-
+kubectl get pods -o wide
+kubectl get deployment
+kubectl get services
 
 ###### Delete ###########
 
-kubectl delete -f eureka-server-service.yaml
-kubectl delete -f eureka-server-deployment.yaml
-kubectl delete pod hazelcast-client-1-645cb7c9ff-rwspn
+##run this from project home directory to delete deployments###
+kubectl delete -f discovery-server/deploy/gcloud-deployment.yaml
+kubectl delete -f hazelcast-server/deploy/gcloud-deployment.yaml
+kubectl delete -f hazelcast-client/deploy/gcloud-deployment-2.yaml
+kubectl delete -f hazelcast-client/deploy/gcloud-deployment.yaml
+
+##run this from project home directory to delete services###
+
+kubectl delete -f discovery-server/deploy/gcloud-service.yaml
+kubectl delete -f hazelcast-server/deploy/gcloud-service.yaml
+kubectl delete -f hazelcast-client/deploy/gcloud-service.yaml
+kubectl delete -f hazelcast-client/deploy/gcloud-service-2.yaml
+
+## Delete a specific pod
+
+##Run this to get a pod number and run the delete command below
+kubectl get pod -o wide
+kubectl delete pod <podnumber>
 
 ##### Create #######
+##run this from project home directory###
+kubectl create -f discovery-server/deploy/gcloud-deployment.yaml
+kubectl create -f discovery-server/deploy/gcloud-service.yaml
 
-kubectl create -f hazelcast-client-1-service.yaml
-kubectl create -f hazelcast-client-1-deployment.yaml
+kubectl create -f hazelcast-server/deploy/gcloud-deployment.yaml
+kubectl create -f hazelcast-server/deploy/gcloud-service.yaml
+
+kubectl create -f hazelcast-client/deploy/gcloud-deployment.yaml
+kubectl create -f hazelcast-client/deploy/gcloud-service.yaml
+
+kubectl create -f hazelcast-client/deploy/gcloud-deployment-2.yaml
+kubectl create -f hazelcast-client/deploy/gcloud-service-2.yaml
