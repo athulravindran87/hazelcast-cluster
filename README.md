@@ -6,11 +6,13 @@ Hazelcast Cluster using EurekaOneDiscovery
 
 ### This project is an experiment to set up Hazelcast clustering using Eureka as Discovery service. 
 
-## **Technical Stack**:                   	         
+## Technical Stack**:                   	         
 1) Eureka Discovery Service.	         	             
 2) EurekaOneDiscovery api                            
 3) Hazelcast                                         
-4) Spring Boot 2 
+4) Spring Boot 2
+5) Docker
+6) Google Cloud - Google Kubernetes Engine
 
 ![hazelcast-server (2)](https://user-images.githubusercontent.com/5833938/60470478-90022880-9c2e-11e9-9c0f-cd30afbcd607.jpg)
 
@@ -22,6 +24,15 @@ Hazelcast Cluster using EurekaOneDiscovery
 | hazelcast-client-1  | 8764 | hazelcast client instance 1.   |
 | hazelcast-client-2  | 8765 | hazelcast client instance 2.   |
 
+## ** What's in here ??
+This project is an working example of hazelcast clustering using Eureka Discovery Service. There are 3 main components as depicted in the picture above. 1) Discovery Server for service registery and service discovery. 2) Hazelcast servers (2) and 3) Hazelcast client. Hazelcast servers have a member join mechanism who discover their peers using hazelcast group name and creates a join. They are also responsible for creation of distributed objects such as map and queues. Hazelcast client joins the hazlecast cluster using Eureka. 
 
+## How to deploy and test ??
+1) Run as standalone Spring boot app
+Start the services in order...Discovery, Hazelcast server and hazelcast client. Although you can start in any order, but following the mentioned order will gauruantee a clean start. Use the following VM arguments for each
 
+Hazelcast Server : -Dhazelcast.port=5701
+Hazelcast Client : -Deureka.client.props=eureka-client-local -Xms1024m -Xmx2048m
+
+Please note, if you want to start more than one hazelcast-server instances to test member join, then you must also provide server.port and hazelcast.port for additional instances. Example: -Dserver.port=8763 -Dhazelcast.port=5702. Same applies to hazelcast-client as well but client requires only server.port property.
 
