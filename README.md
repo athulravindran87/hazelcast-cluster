@@ -3,10 +3,7 @@ Hazelcast Cluster using EurekaOneDiscovery
 
 [![Build Status](http://34.68.205.106/jenkins/buildStatus/icon?job=hazelcast-cluster-master-build&subject=Master%20Build)](http://34.68.205.106/jenkins/job/hazelcast-cluster-master-build/)       [![Build Status](http://34.68.205.106/jenkins/buildStatus/icon?job=hazelcast-cluster-mutation-test&subject=Mutation%20Test)](http://34.68.205.106/jenkins/job/hazelcast-cluster-mutation-test/)    [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e9e89cc98f5d4b0f9fd80d18c9935981)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=athulravindran87/hazelcast-cluster&amp;utm_campaign=Badge_Grade)     [![Quality Gate Status](http://34.67.51.46/api/project_badges/measure?project=com.athul%3Ahazelcast-cluster&metric=alert_status)](http://34.67.51.46/dashboard?id=com.athul%3Ahazelcast-cluster)       [![Bugs](http://34.67.51.46/api/project_badges/measure?project=com.athul%3Ahazelcast-cluster&metric=bugs)](http://34.67.51.46/dashboard?id=com.athul%3Ahazelcast-cluster)    [![Coverage](http://34.67.51.46/api/project_badges/measure?project=com.athul%3Ahazelcast-cluster&metric=coverage)](http://34.67.51.46/dashboard?id=com.athul%3Ahazelcast-cluster)    [![Technical Debt](http://34.67.51.46/api/project_badges/measure?project=com.athul%3Ahazelcast-cluster&metric=sqale_index)](http://34.67.51.46/dashboard?id=com.athul%3Ahazelcast-cluster)   [![Maintainability Rating](http://34.67.51.46/api/project_badges/measure?project=com.athul%3Ahazelcast-cluster&metric=sqale_rating)](http://34.67.51.46/dashboard?id=com.athul%3Ahazelcast-cluster)
 
-
-### This project is an experiment to set up Hazelcast clustering using Eureka as Discovery service. 
-
-## Technical Stack**:                   	         
+## Technical Stack:                   	         
 1) Eureka Discovery Service.	         	             
 2) EurekaOneDiscovery api                            
 3) Hazelcast                                         
@@ -24,7 +21,7 @@ Hazelcast Cluster using EurekaOneDiscovery
 | hazelcast-client-1  | 8764 | hazelcast client instance 1.   |
 | hazelcast-client-2  | 8765 | hazelcast client instance 2.   |
 
-## ** What's in here ??
+## What's in here ??
 This project is an working example of hazelcast clustering using Eureka Discovery Service. There are 3 main components as depicted in the picture above. 1) Discovery Server for service registery and service discovery. 2) Hazelcast servers (2) and 3) Hazelcast client. Hazelcast servers are capable of a member joining mechanism who discover each other using hazelcast group name and creates a join. They are also responsible for creation of distributed objects such as map and queues. Hazelcast client joins the hazlecast cluster using Eureka. 
 
 ## How to deploy and test ??
