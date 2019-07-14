@@ -45,6 +45,19 @@ Start the services in order...Discovery, Hazelcast server and hazelcast client. 
     
     Go thru `Commands.txt` file, it is a cheat sheet of `kube` commands required specific to this project.
     
+Use ```/actuator/health``` on hazelcast server to view custom implemented health endpoint to view hazelcast-servers member join.      
     
+ ### Test
+ 
+ #### The best way to test is "put" on one hazelcast-client instance and "get" on another hazelcast-client instance. 
+ 
+ There are 2 sets of API endpoints to test
+- Map
+   - /map/put?key=xx&value=yyy
+   - /map/get?key=xx
+- Queue
+   - /queue/put?value=xx
+   - /queue/get
+   
  ### Happy Coding !!!! :+1::shipit:  
 
