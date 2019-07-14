@@ -43,7 +43,16 @@ Start the services in order...Discovery, Hazelcast server and hazelcast client. 
     
  3. Running on Google Kubernetes Engine (GKE)
     
-    Go thru `Commands.txt` file, it is a cheat sheet of `kube` commands required specific to this project.
+    Go thru `commands.txt` file, it is a cheat sheet of `kube` commands required specific to this project.
+    
+    ##### Pre-requisites
+    
+    Install the Google Cloud SDK, which includes the `gcloud` command-line tool. Using the gcloud command line tool, install 
+    the Kubernetes command-line tool. `kubectl` is used to communicate with   Kubernetes, which is the cluster orchestration 
+    system of GKE clusters:
+
+    `gcloud components install kubectl`
+
     
 Use ```/actuator/health``` on hazelcast server to view custom implemented health endpoint to view hazelcast-servers member join.      
     
