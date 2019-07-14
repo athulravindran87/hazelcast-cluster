@@ -28,11 +28,26 @@ Hazelcast Cluster using EurekaOneDiscovery
 This project is an working example of hazelcast clustering using Eureka Discovery Service. There are 3 main components as depicted in the picture above. 1) Discovery Server for service registery and service discovery. 2) Hazelcast servers (2) and 3) Hazelcast client. Hazelcast servers are capable of a member joining mechanism who discover each other using hazelcast group name and creates a join. They are also responsible for creation of distributed objects such as map and queues. Hazelcast client joins the hazlecast cluster using Eureka. 
 
 ## How to deploy and test ??
-1) Run as standalone Spring boot app
+1. Run as standalone Spring boot app
+
 Start the services in order...Discovery, Hazelcast server and hazelcast client. Although you can start in any order, but following the mentioned order will gauruantee a clean start. Use the following VM arguments for each
 ```
 - Hazelcast Server : -Dhazelcast.port=5701
 - Hazelcast Client : -Deureka.client.props=eureka-client-local -Xms1024m -Xmx2048m
 ```
-   Please note, if you want to start more than one hazelcast-server instances to test member join, then you must also provide    server.port and hazelcast.port for additional instances. `Example: -Dserver.port=8763 -Dhazelcast.port=5702`. Same applies to    hazelcast-client as well but client requires only server.port property.
+   Please note, if you want to start more than one hazelcast-server instances to test member join, then you must also provide    server.port and hazelcast.port for additional instances. 
+   `Example: -Dserver.port=8763 -Dhazelcast.port=5702`. 
+   Same applies to hazelcast-client as well but client requires `server.port` property only.
+   
+ 2. Running on Docker locally
+   
+    Execute docker-compose.yaml on your local docker engine. Compose will spin 5 containers. 1 Eureka server,2 hazelcast    
+    servers and 2 hazelcast clients. Port numbers are mentioned in the compose file.
+    
+ 3. Running on Google Kubernetes Engine (GKE)
+    
+    Go thru `Commands.txt` file, it is a cheat sheet of `kube` commands required specific to this project.
+    
+    
+ ### Happy Coding !!!! :+1::shipit:  
 
