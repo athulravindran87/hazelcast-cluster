@@ -14,4 +14,4 @@ WORKDIR /tmp
 EXPOSE 8764
 
 # Run the jar file
-ENTRYPOINT ["java","-jar","-Xms512m", "-Xmx1024m","hazelcast-client.jar"]
+ENTRYPOINT ["java","-jar","-Xms1024m", "-Xmx2048m","hazelcast-client.jar"]
