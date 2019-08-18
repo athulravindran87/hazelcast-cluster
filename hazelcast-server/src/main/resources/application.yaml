@@ -5,6 +5,7 @@ spring:
     name: hazelcast-server
   profiles:
     active: local
+  cloud.client.hostname: ${spring.cloud.client.ip-address:localhost}
 
 eureka:
   client:
@@ -19,8 +20,8 @@ eureka:
   instance:
     appname: hazelcast-server
     virtual-host-name: hazelcast-server
-    ip-address: ${spring.cloud.client.ip-address}
-    hostname: ${spring.cloud.client.ip-address}
+    ip-address: ${POD_IP:${spring.cloud.client.ip-address:localhost}}
+    hostname: ${POD_IP:${spring.cloud.client.ip-address:localhost}}
     non-secure-port: ${hazelcast.port}
     preferIpAddress: true
     status-page-url: http://${eureka.instance.hostname}:${server.port}/actuator/info
