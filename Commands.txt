@@ -23,17 +23,10 @@ kubectl get services
 ###### Delete ###########
 
 ##run this from project home directory to delete deployments###
-kubectl delete -f discovery-server/deploy/gcloud-deployment.yaml
-kubectl delete -f hazelcast-server/deploy/gcloud-deployment.yaml
-kubectl delete -f hazelcast-client/deploy/gcloud-deployment-2.yaml
-kubectl delete -f hazelcast-client/deploy/gcloud-deployment.yaml
 
-##run this from project home directory to delete services###
-
-kubectl delete -f discovery-server/deploy/gcloud-service.yaml
-kubectl delete -f hazelcast-server/deploy/gcloud-service.yaml
-kubectl delete -f hazelcast-client/deploy/gcloud-service.yaml
-kubectl delete -f hazelcast-client/deploy/gcloud-service-2.yaml
+kubectl delete -f discovery-server/deploy/kube-discovery-server.yaml
+kubectl delete -f hazelcast-server/deploy/kube-hazelcast-server.yaml
+kubectl delete -f hazelcast-client/deploy/kube-hazelcast-client.yaml
 
 ## Delete a specific pod
 
@@ -43,17 +36,16 @@ kubectl delete pod <podnumber>
 
 ##### Create #######
 ##run this from project home directory###
-kubectl create -f discovery-server/deploy/gcloud-deployment.yaml
-kubectl create -f discovery-server/deploy/gcloud-service.yaml
 
-kubectl create -f hazelcast-server/deploy/gcloud-deployment.yaml
-kubectl create -f hazelcast-server/deploy/gcloud-service.yaml
-
-kubectl create -f hazelcast-client/deploy/gcloud-deployment.yaml
-kubectl create -f hazelcast-client/deploy/gcloud-service.yaml
-
-kubectl create -f hazelcast-client/deploy/gcloud-deployment-2.yaml
-kubectl create -f hazelcast-client/deploy/gcloud-service-2.yaml
+kubectl create -f discovery-server/deploy/kube-discovery-server.yaml
+kubectl create -f hazelcast-server/deploy/kube-hazelcast-server.yaml
+kubectl create -f hazelcast-client/deploy/kube-hazelcast-client.yaml
 
 ## open firewall to a specific nodePort
 gcloud compute firewall-rules create eureka-node-port --allow tcp:30222
+
+
+##### scale ######
+
+kubectl scale --replicas=3 deployment.apps/hazelcast-server-deployment
+
