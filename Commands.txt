@@ -48,4 +48,3 @@ gcloud compute firewall-rules create eureka-node-port --allow tcp:30222
 ##### scale ######
 
 kubectl scale --replicas=3 deployment.apps/hazelcast-server-deployment
-
