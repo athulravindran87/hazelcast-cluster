@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "hazelcast-cluster",
+  "private_key_id": "1a24b04fcdc23f3306f39b5f42ba4214848087a5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCz8WgtIfxGnWtC\nvV+XTfFqZHlKNjtTsOYU0TN9++ZxVmWjAz94AJsO+WpXOuMd2Su6zjoOXUInfqFj\nlI4wcOfvcGY92QMpxa0xo14rpXQVfjGCi/0VLTmqyGQym4HjMSDse7LCyuzCvnyx\nNDghnu5M9cgJjsoYrWSC6Fh2kBFak38HVOsJJMi62c81iC0b2iYsFhS55qe0WDlJ\n8wjvfiPRlMR9fme1xOOK3xg7k8AzXmKDZsz5T2JHt6Rg8DKoTEbAtG2X+61ERlnV\n9tlgocr0Vmkl6i8zsv83MmVGBbGnW2kQmLZPF083puOpqqj9mBhnvxRM+nBz7h0L\nqVWjTMcJAgMBAAECgf9rjS9iK5192bX61uQVtEhPs4bqSoZ86lp3wMNHTTXsMhwU\nQDYaXTCpClJ213qN0HzRnrYofHQnYp/hN/OdHS5pb/bGzfadxGB4zh4+ftNDhW83\nvsGQGponJNrq0wWblAl1T4deKtgYm4Jg+cbm55Z4CoXCd1LaqK4r9easTz0qmQHd\nZ9KY6VRN+9nqV9ZgvTBUqV3RofbYdfF16G/WVkAKfcqKX/8Ot7DMCwQM536NDg/6\nh7u9x4pQ9vZuQz9KnvSuRg+k3ZjIwr3y2srldNs6BWCVVeIRybNme/8emGQgWWOG\nMkXC/qza+Vf0b3f7O5qzcP14D4JmUNXLyvyKYLECgYEA9iqUdmiQFYHpPXjsykK3\nNxFdVQCC1bbLWzsrKnjtQKu6Wwq89vLpCur7eJitYMeXm8HpxJ0cn/dPu+8ENYqP\nzdqWRpXVgF+BR6ZYc18oRVEZ7CauvDFIhBB3tn9BRxL43199TUXfb9aOClm7rJN7\nB04qL74r3aujS5WoMjWaD5kCgYEAuyGYFQb3k6R4+R2v6ZexvUdwHA51NZwtPk3M\nY5v9YcE7NC5zqwNVBDjsG3WotGdYc/vtOF3vudqBIO8ykpO2gXdZD+OdomJ3VK+i\nPDiLCMKlP55hK8KtGHb24i3YhpfZJgDPXdPRMWpLYOfwWrbAbAKm7SUupuWTLo+6\n2B3T2PECgYEAmvHUPu+z+YWq7OGHkgwKTKQmbhGDSMflGkiU9AfntjQheZq5tGrT\nWubrYE4hm3AmMokM/o+x69J8Ipvgt16/A2CaBFXdbA8xTYsb04rKy06wFV+Hzrbq\noQ3IfFt/GCCN+/Ob6B6Z9EhFYah3o7m0z7VYgnKeI8ocX8AUfX4VuckCgYEAgHt3\nVPCcqdVibgCRGHxbv869zbWriix57+4wqC+hEC5A/Pnr1v4JsEV47v2g4ISYecH+\nRRZSEzRQNpGlEniy9T9BeiRYxfZ/YjjY1iooY9Jo7T5MD2SxvjtoFTFPGlJF+M7T\nkeNuHVSS/q0hHNefVEmZ3PcLifHUVULAEcShALECgYAH3lPdmM0mhK9etbceEmlQ\nMZSU3iRlsKwZUOhSoN8wptgz32PQK/EggmoqPNPBGWvWCgzklrifceqs/Y4QPznI\nypdFuZxGYKb09hafvmMIphAinQM/WDSqpBlkr13xmSlmPYo1JReEV4nhiTg6Awm9\n8InqgD8Pi/wcSX2FiedbEg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "jenkins@hazelcast-cluster.iam.gserviceaccount.com",
+  "client_id": "107693252295180727521",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/jenkins%40hazelcast-cluster.iam.gserviceaccount.com"
+}

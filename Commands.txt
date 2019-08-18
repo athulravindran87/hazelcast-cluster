@@ -54,3 +54,6 @@ kubectl create -f hazelcast-client/deploy/gcloud-service.yaml
 
 kubectl create -f hazelcast-client/deploy/gcloud-deployment-2.yaml
 kubectl create -f hazelcast-client/deploy/gcloud-service-2.yaml
+
+## open firewall to a specific nodePort
+gcloud compute firewall-rules create eureka-node-port --allow tcp:30222

@@ -311,7 +311,7 @@
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
                 </plugin>
-                <!--<plugin>
+                <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>exec-maven-plugin</artifactId>
                     <version>1.3.2</version>
@@ -330,7 +330,7 @@
                             <argument>${project.parent.basedir}/token.sh</argument>
                         </arguments>
                     </configuration>
-                </plugin>-->
+                </plugin>
 
                 <!--<plugin>
                     <groupId>io.fabric8</groupId>
@@ -363,21 +363,6 @@
                     </executions>
                 </plugin>-->
 
-               <!-- <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                    <version>2.1.7.RELEASE</version>
-                    <executions>
-                        <execution>
-                            <phase>compile</phase>
-                        </execution>
-                    </executions>
-                    <configuration>
-                        <systemPropertyVariables>
-                            <glcoud.token>$(gcloud auth print-access-token)</glcoud.token>
-                        </systemPropertyVariables>
-                    </configuration>
-                </plugin>-->
 
                 <plugin>
                     <groupId>io.fabric8</groupId>
@@ -398,12 +383,6 @@
                                 </build>
                             </image>
                         </images>
-<!--
-                        <authConfig>
-                            <username>oauth2accesstoken</username>
-                            <password>ya29.Gl1mBzzEOx85vjCW4rcl9J1EcKx6ONQ7UejrqBfTTIUd7wS3uQ_8CXLgx3AE1ln4cf3WiFHbNqZs4SpGrZJAW_-k57vD4c5RCq-VwyBxJCTbl-2FH9zGJrG8HFcdGKM</password>
-                        </authConfig>
--->
                     </configuration>
                     <executions>
                         <execution>
