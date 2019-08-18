@@ -1,3 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hazelcast-server-service
+spec:
+  selector:
+    app: hazelcast-server
+  ports:
+    - protocol: TCP
+      port: 8762
+      targetPort: 8762
+  type: LoadBalancer
+
+---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -8,7 +23,7 @@ spec:
   selector:
     matchLabels:
       app: hazelcast-server
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
