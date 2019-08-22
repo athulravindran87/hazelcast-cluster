@@ -1,17 +1,24 @@
-package com.athul.common.server;
+package com.athul.hazelcastserver1.health;
 
-import com.athul.common.BaseTest;
 import com.hazelcast.cluster.ClusterState;
 import com.hazelcast.config.GroupConfig;
-import com.hazelcast.core.*;
+import com.hazelcast.config.MapConfig;
+import com.hazelcast.core.Hazelcast;
+import com.hazelcast.core.HazelcastInstance;
+import com.hazelcast.core.IMap;
+import com.hazelcast.core.Member;
 import com.hazelcast.monitor.LocalMapStats;
 import com.hazelcast.nio.Address;
 import com.hazelcast.version.Version;
 import org.eclipse.collections.api.map.MutableMap;
 import org.eclipse.collections.api.set.MutableSet;
+import org.eclipse.collections.impl.factory.Maps;
 import org.eclipse.collections.impl.factory.Sets;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.contrib.java.lang.system.SystemErrRule;
+import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.runner.RunWith;
 import org.mockito.Answers;
 import org.mockito.InjectMocks;
@@ -30,22 +37,23 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasEntry;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThat;
-import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest({ Hazelcast.class, GroupConfig.class, Address.class })
-public class HazelcastHealthTest extends BaseTest
+public class HazelcastHealthTest
 {
+    @Rule
+    public final SystemOutRule systemOutRule = new SystemOutRule().muteForSuccessfulTests().enableLog();
+
+    @Rule
+    public final SystemErrRule systemErrRule = new SystemErrRule().muteForSuccessfulTests().enableLog();
     @InjectMocks
     private HazelcastHealth testObj;
 
     @Mock(answer = Answers.RETURNS_DEEP_STUBS)
     private HazelcastInstance hazelcastInstance;
-
-    @Mock
-    private DistributedObject distributedObject;
 
     @Mock
     private IMap map;
@@ -66,8 +74,11 @@ public class HazelcastHealthTest extends BaseTest
     @Mock
     private GroupConfig groupConfig;
 
+    @Mock
+    private MapConfig mapConfig;
 
-    private HashSet<Member> members = new HashSet <>();
+
+    private HashSet <Member> members = new HashSet <>();
     private MutableSet <Address> addresses = Sets.mutable.empty();
 
     @Before
@@ -80,16 +91,14 @@ public class HazelcastHealthTest extends BaseTest
         addresses.add(address);
         members.add(member);
         when(hazelcastInstance.getMap("somename")).thenReturn(map);
-        when(hazelcastInstance.getDistributedObjects()).thenReturn(Collections.singleton(distributedObject));
         when(hazelcastInstance.getConfig().getGroupConfig()).thenReturn(mock(GroupConfig.class));
         when(hazelcastInstance.getCluster().getClusterState()).thenReturn(ClusterState.ACTIVE);
         when(hazelcastInstance.getCluster().getClusterVersion()).thenReturn(Version.of("3.12"));
         when(hazelcastInstance.getCluster().getMembers()).thenReturn(members);
         when(member.getAddress()).thenReturn(address);
         when(address.getInetAddress()).thenReturn(inetAddress);
-        when(distributedObject.getServiceName()).thenReturn("testmapService");
-        when(distributedObject.getName()).thenReturn("somename");
         when(hazelcastInstance.getConfig().getGroupConfig()).thenReturn(groupConfig);
+        when(hazelcastInstance.getConfig().getMapConfigs()).thenReturn(Maps.mutable.of("test-map", mapConfig));
         when(groupConfig.getName()).thenReturn("hz_cluster");
 
     }
@@ -102,7 +111,7 @@ public class HazelcastHealthTest extends BaseTest
         assertThat(testObj.health().getStatus(), equalTo(Status.DOWN));
         assertThat(testObj.health().getDetails(),
                 hasEntry("Hazelcast-node",
-                        "No hazelcast server exists"));
+                        "No hazelcast server instances are running"));
     }
 
     @Test
@@ -142,7 +151,7 @@ public class HazelcastHealthTest extends BaseTest
 
 
         assertThat(testObj.health().getStatus(), equalTo(Status.UP));
-        assertThat(testObj.health().getDetails().size(), equalTo(3));
+        assertThat(testObj.health().getDetails().size(), equalTo(5));
 
     }
 
@@ -150,7 +159,7 @@ public class HazelcastHealthTest extends BaseTest
     public void testClusterDetails() throws Exception
     {
 
-        Map<String,Object> result = (Map <String, Object>) testObj.clusterDetails(hazelcastInstance);
+        Map <String,Object> result = (Map <String, Object>) testObj.clusterDetails(hazelcastInstance);
 
         assertThat(result.size(),equalTo(4));
 
@@ -174,12 +183,12 @@ public class HazelcastHealthTest extends BaseTest
     {
 
         when(member.getAddress()).thenReturn(address);
-        when(hazelcastInstance.getMap(anyString())).thenReturn(map);
+        when(hazelcastInstance.getMap("test-map")).thenReturn(map);
         when(map.getLocalMapStats()).thenReturn(localMapStats);
 
-        MutableMap <String, LocalMapStats> result = testObj.cacheStats(hazelcastInstance);
+        MutableMap <String, LocalMapStats> result = testObj.mapStats(hazelcastInstance);
 
-        assertThat(result, hasEntry("somename", localMapStats));
+        assertThat(result, hasEntry("test-map", localMapStats));
     }
 
 

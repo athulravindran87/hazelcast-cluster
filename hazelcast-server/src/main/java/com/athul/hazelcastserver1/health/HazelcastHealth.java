@@ -1,20 +1,19 @@
-package com.athul.common.server;
+package com.athul.hazelcastserver1.health;
 
-import com.hazelcast.core.DistributedObject;
-import com.hazelcast.core.Hazelcast;
 import com.hazelcast.core.HazelcastInstance;
 import com.hazelcast.core.Member;
 import com.hazelcast.monitor.LocalMapStats;
+import com.hazelcast.monitor.LocalQueueStats;
 import com.hazelcast.nio.Address;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.collections.api.map.MutableMap;
-import org.eclipse.collections.impl.collection.mutable.CollectionAdapter;
 import org.eclipse.collections.impl.factory.Sets;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.actuate.health.Health;
 import org.springframework.boot.actuate.health.HealthIndicator;
 import org.springframework.stereotype.Component;
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -26,12 +25,15 @@ public class HazelcastHealth implements HealthIndicator
 
     public static final String HAZELCAST_NODE = "Hazelcast-node";
 
+    @Autowired
+    @Qualifier("hzServerInstance")
+    private HazelcastInstance hazelcastInstance;
+
     @Override
     public Health health()
     {
         try
         {
-            HazelcastInstance hazelcastInstance = Hazelcast.getAllHazelcastInstances().stream().findAny().orElse(null);
 
             if(Objects.isNull(hazelcastInstance))
             {
@@ -42,12 +44,12 @@ public class HazelcastHealth implements HealthIndicator
                 return Health.down().withDetail(HAZELCAST_NODE, "No hazelcast server instances are running").build();
             }
 
-            Collection <DistributedObject> distributedObjects = hazelcastInstance.getDistributedObjects();
-
             return Health.up()
                     .withDetail("Cluster_Details ", clusterDetails(hazelcastInstance))
-                    .withDetail("All Objects ", distributedObjects.stream().map(DistributedObject::getName))
-                    .withDetail("Caches",cacheStats(hazelcastInstance))
+                    .withDetail("Maps ", hazelcastInstance.getConfig().getMapConfigs().keySet())
+                    .withDetail("Queues ", hazelcastInstance.getConfig().getQueueConfigs().keySet())
+                    .withDetail("Map Stats", mapStats(hazelcastInstance))
+                    .withDetail("Queue Stats", queueStats(hazelcastInstance))
                     .build();
         }
         catch(Exception e)
@@ -82,13 +84,16 @@ public class HazelcastHealth implements HealthIndicator
         return null;
     }
 
-    protected MutableMap <String, LocalMapStats>  cacheStats(HazelcastInstance hazelcastInstance)
+    protected MutableMap <String, LocalMapStats> mapStats(HazelcastInstance hazelcastInstance)
     {
-       return CollectionAdapter.adapt(
-                hazelcastInstance.getDistributedObjects()).select(
-                distributedObject->distributedObject.getServiceName().endsWith("mapService")).toMap(
-                DistributedObject::getName,
-                distributedObject->hazelcastInstance.getMap(distributedObject.getName()).getLocalMapStats());
+       return Sets.adapt(hazelcastInstance.getConfig().getMapConfigs().keySet()).toMap(s -> s, s -> hazelcastInstance.getMap(s).getLocalMapStats());
+
+
+    }
+
+    protected MutableMap <String, LocalQueueStats>  queueStats(HazelcastInstance hazelcastInstance)
+    {
+        return Sets.adapt(hazelcastInstance.getConfig().getQueueConfigs().keySet()).toMap(s -> s, s -> hazelcastInstance.getQueue(s).getLocalQueueStats());
 
 
     }

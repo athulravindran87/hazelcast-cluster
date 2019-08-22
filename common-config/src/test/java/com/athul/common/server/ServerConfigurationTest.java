@@ -7,7 +7,10 @@ import com.hazelcast.core.HazelcastInstance;
 import com.hazelcast.eureka.one.EurekaOneDiscoveryStrategyFactory;
 import com.netflix.discovery.EurekaClient;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.contrib.java.lang.system.SystemErrRule;
+import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentMatchers;
 import org.mockito.InjectMocks;
@@ -28,6 +31,12 @@ import static org.mockito.Mockito.when;
 @PrepareForTest({ Hazelcast.class, EurekaOneDiscoveryStrategyFactory.class })
 public class ServerConfigurationTest extends BaseTest
 {
+
+    @Rule
+    public final SystemOutRule systemOutRule = new SystemOutRule().muteForSuccessfulTests().enableLog();
+
+    @Rule
+    public final SystemErrRule systemErrRule = new SystemErrRule().muteForSuccessfulTests().enableLog();
 
     @Mock
     private EurekaClient eurekaClient;
