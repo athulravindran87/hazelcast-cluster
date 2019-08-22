@@ -1,6 +1,5 @@
-package com.athul.common.server;
+package com.athul.hazelcastserver1.config;
 
-import com.athul.common.BaseTest;
 import com.hazelcast.config.*;
 import com.hazelcast.core.Hazelcast;
 import com.hazelcast.core.HazelcastInstance;
@@ -29,7 +28,7 @@ import static org.mockito.Mockito.when;
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest({ Hazelcast.class, EurekaOneDiscoveryStrategyFactory.class })
-public class ServerConfigurationTest extends BaseTest
+public class ServerConfigurationTest
 {
 
     @Rule
@@ -79,16 +78,13 @@ public class ServerConfigurationTest extends BaseTest
         PowerMockito.verifyStatic(EurekaOneDiscoveryStrategyFactory.class);
         EurekaOneDiscoveryStrategyFactory.setEurekaClient(eurekaClient);
 
-        assertThat(result.getInstanceName(),equalTo("hazelcast-datastore-instance"));
+        assertThat(result.getInstanceName(), equalTo("hazelcast-datastore-instance"));
 
-        assertThat(result.getProperties(), allOf(
-                hasEntry("hazelcast.logging.type", "slf4j"),
-                hasEntry("hazelcast.jmx", "false"),
-                hasEntry("hazelcast.discovery.enabled", "true"),
-                hasEntry("hazelcast.rest.enabled", "true"),
-                hasEntry("hazelcast.discovery.public.ip.enabled", "true"),
-                hasEntry("hazelcast.http.healthcheck.enabled", "true")
-        ));
+        assertThat(result.getProperties(),
+                allOf(hasEntry("hazelcast.logging.type", "slf4j"), hasEntry("hazelcast.jmx", "false"),
+                        hasEntry("hazelcast.discovery.enabled", "true"), hasEntry("hazelcast.rest.enabled", "true"),
+                        hasEntry("hazelcast.discovery.public.ip.enabled", "true"),
+                        hasEntry("hazelcast.http.healthcheck.enabled", "true")));
 
 
     }
@@ -116,12 +112,11 @@ public class ServerConfigurationTest extends BaseTest
         assertThat(result.getEurekaConfig().isEnabled(), equalTo(true));
 
         assertThat(result.getEurekaConfig().getProperties(),
-                allOf(  hasEntry("self-registration", "true"),
-                        hasEntry("namespace", "hazelcast"),
+                allOf(hasEntry("self-registration", "true"), hasEntry("namespace", "hazelcast"),
                         hasEntry("skip-eureka-registration-verification", "true"),
                         hasEntry("use-metadata-for-host-and-port", "true")
 
-                        ));
+                ));
         assertThat(result.getMulticastConfig().isEnabled(), equalTo(false));
         assertThat(result.getTcpIpConfig().isEnabled(), equalTo(false));
         assertThat(result.getAwsConfig().isEnabled(), equalTo(false));
@@ -163,7 +158,7 @@ public class ServerConfigurationTest extends BaseTest
     @Test
     public void testQueueConfig()
     {
-        Map<String, QueueConfig> result = testObj.hazelcastConfig(eurekaClient).getQueueConfigs();
+        Map <String, QueueConfig> result = testObj.hazelcastConfig(eurekaClient).getQueueConfigs();
 
         assertThat(result.size(), equalTo(1));
 

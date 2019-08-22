@@ -1,6 +1,5 @@
-package com.athul.common.client;
+package com.athul.hazelcastclient1.config;
 
-import com.athul.common.BaseTest;
 import com.hazelcast.client.HazelcastClient;
 import com.hazelcast.client.config.ClientConfig;
 import com.hazelcast.client.config.ClientNetworkConfig;
@@ -20,9 +19,10 @@ import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 
+
 @RunWith(PowerMockRunner.class)
 @PrepareForTest({ HazelcastClient.class, EurekaOneDiscoveryStrategyFactory.class })
-public class ClientConfigurationTest extends BaseTest
+public class ClientConfigurationTest
 {
 
     private ClientConfiguration testObj;
@@ -55,13 +55,10 @@ public class ClientConfigurationTest extends BaseTest
     {
         ClientConfig result = testObj.hazelcastConfig();
 
-        assertThat(result.getProperties(), allOf(
-                hasEntry("hazelcast.logging.type", "slf4j"),
-                hasEntry("hazelcast.jmx", "true"),
-                hasEntry("hazelcast.discovery.enabled", "true"),
-                hasEntry("hazelcast.socket.bind.any", "false"),
-                hasEntry("hazelcast.socket.client.bind.any", "true")
-        ));
+        assertThat(result.getProperties(),
+                allOf(hasEntry("hazelcast.logging.type", "slf4j"), hasEntry("hazelcast.jmx", "true"),
+                        hasEntry("hazelcast.discovery.enabled", "true"), hasEntry("hazelcast.socket.bind.any", "false"),
+                        hasEntry("hazelcast.socket.client.bind.any", "true")));
 
         assertThat(result.getGroupConfig().getName(), equalTo("hazelcast-server"));
 
@@ -102,8 +99,7 @@ public class ClientConfigurationTest extends BaseTest
         assertThat(result.getNetworkConfig().getDiscoveryConfig().getDiscoveryStrategyConfigs(), allOf(hasItem(allOf(
 
                 hasProperty("discoveryStrategyFactory", instanceOf(EurekaOneDiscoveryStrategyFactory.class)),
-                hasProperty("properties")
-        ))));
+                hasProperty("properties")))));
 
     }
 }

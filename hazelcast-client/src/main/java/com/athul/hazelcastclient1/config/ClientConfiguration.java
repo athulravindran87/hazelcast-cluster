@@ -1,4 +1,4 @@
-package com.athul.common.client;
+package com.athul.hazelcastclient1.config;
 
 import com.hazelcast.client.HazelcastClient;
 import com.hazelcast.client.config.ClientConfig;
@@ -13,12 +13,14 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
+@ComponentScan(basePackages = "com.athul.common.client", lazyInit = true)
 @Slf4j
 public class ClientConfiguration
 {

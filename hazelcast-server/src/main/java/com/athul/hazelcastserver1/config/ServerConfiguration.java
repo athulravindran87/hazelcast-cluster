@@ -1,4 +1,4 @@
-package com.athul.common.server;
+package com.athul.hazelcastserver1.config;
 
 import com.hazelcast.config.*;
 import com.hazelcast.core.Hazelcast;
