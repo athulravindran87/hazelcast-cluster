@@ -4,7 +4,6 @@ import com.hazelcast.core.HazelcastInstance;
 import com.hazelcast.core.Member;
 import com.hazelcast.monitor.LocalMapStats;
 import com.hazelcast.monitor.LocalQueueStats;
-import com.hazelcast.nio.Address;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.collections.api.map.MutableMap;
 import org.eclipse.collections.impl.factory.Sets;
@@ -16,7 +15,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 @Component
 @Slf4j
@@ -35,10 +33,6 @@ public class HazelcastHealth implements HealthIndicator
         try
         {
 
-            if(Objects.isNull(hazelcastInstance))
-            {
-                return Health.down().withDetail(HAZELCAST_NODE, "No hazelcast server exists").build();
-            }
             if(! hazelcastInstance.getLifecycleService().isRunning())
             {
                 return Health.down().withDetail(HAZELCAST_NODE, "No hazelcast server instances are running").build();
@@ -66,22 +60,9 @@ public class HazelcastHealth implements HealthIndicator
         clusters.put("Name", instance.getConfig().getGroupConfig().getName());
         clusters.put("State", instance.getCluster().getClusterState());
         clusters.put("Version", instance.getCluster().getClusterVersion());
-        clusters.put("Cluster Members", Sets.adapt(instance.getCluster().getMembers()).collect(this::getInetAddress).toString());
+        clusters.put("Cluster Members", Sets.adapt(instance.getCluster().getMembers()).collect(Member::getAddress).toString());
 
         return clusters;
-    }
-
-    protected Address getInetAddress(Member member)
-    {
-        try
-        {
-            return member.getAddress();
-        }
-        catch(Exception e)
-        {
-            log.error("Unable to get InetAddress for host", e);
-        }
-        return null;
     }
 
     protected MutableMap <String, LocalMapStats> mapStats(HazelcastInstance hazelcastInstance)

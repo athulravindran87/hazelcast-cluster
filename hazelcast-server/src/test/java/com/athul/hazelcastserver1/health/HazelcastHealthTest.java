@@ -3,11 +3,10 @@ package com.athul.hazelcastserver1.health;
 import com.hazelcast.cluster.ClusterState;
 import com.hazelcast.config.GroupConfig;
 import com.hazelcast.config.MapConfig;
-import com.hazelcast.core.Hazelcast;
-import com.hazelcast.core.HazelcastInstance;
-import com.hazelcast.core.IMap;
-import com.hazelcast.core.Member;
+import com.hazelcast.config.QueueConfig;
+import com.hazelcast.core.*;
 import com.hazelcast.monitor.LocalMapStats;
+import com.hazelcast.monitor.LocalQueueStats;
 import com.hazelcast.nio.Address;
 import com.hazelcast.version.Version;
 import org.eclipse.collections.api.map.MutableMap;
@@ -29,13 +28,11 @@ import org.powermock.modules.junit4.PowerMockRunner;
 import org.springframework.boot.actuate.health.Status;
 
 import java.net.InetAddress;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Map;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasEntry;
-import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -59,7 +56,13 @@ public class HazelcastHealthTest
     private IMap map;
 
     @Mock
+    private IQueue queue;
+
+    @Mock
     private LocalMapStats localMapStats;
+
+    @Mock
+    private LocalQueueStats localQueueStats;
 
 
     @Mock(answer = Answers.RETURNS_DEEP_STUBS)
@@ -76,6 +79,9 @@ public class HazelcastHealthTest
 
     @Mock
     private MapConfig mapConfig;
+
+    @Mock
+    private QueueConfig queueConfig;
 
 
     private HashSet <Member> members = new HashSet <>();
@@ -99,25 +105,14 @@ public class HazelcastHealthTest
         when(address.getInetAddress()).thenReturn(inetAddress);
         when(hazelcastInstance.getConfig().getGroupConfig()).thenReturn(groupConfig);
         when(hazelcastInstance.getConfig().getMapConfigs()).thenReturn(Maps.mutable.of("test-map", mapConfig));
+        when(hazelcastInstance.getConfig().getQueueConfigs()).thenReturn(Maps.mutable.of("test-queue", queueConfig));
         when(groupConfig.getName()).thenReturn("hz_cluster");
 
     }
 
     @Test
-    public void healthWithNoInstance()
-    {
-        PowerMockito.when(Hazelcast.getAllHazelcastInstances()).thenReturn(Sets.mutable.empty());
-
-        assertThat(testObj.health().getStatus(), equalTo(Status.DOWN));
-        assertThat(testObj.health().getDetails(),
-                hasEntry("Hazelcast-node",
-                        "No hazelcast server instances are running"));
-    }
-
-    @Test
     public void healthWithException()
     {
-        PowerMockito.when(Hazelcast.getAllHazelcastInstances()).thenReturn(Collections.singleton(hazelcastInstance));
 
         when(hazelcastInstance.getLifecycleService().isRunning()).thenThrow(RuntimeException.class);
 
@@ -130,7 +125,6 @@ public class HazelcastHealthTest
     @Test
     public void healthWithNoInstanceRunning()
     {
-        PowerMockito.when(Hazelcast.getAllHazelcastInstances()).thenReturn(Collections.singleton(hazelcastInstance));
 
         when(hazelcastInstance.getLifecycleService().isRunning()).thenReturn(false);
 
@@ -143,7 +137,6 @@ public class HazelcastHealthTest
     @Test
     public void healthHappyPath()
     {
-        PowerMockito.when(Hazelcast.getAllHazelcastInstances()).thenReturn(Collections.singleton(hazelcastInstance));
 
         when(hazelcastInstance.getLifecycleService().isRunning()).thenReturn(true);
 
@@ -179,7 +172,7 @@ public class HazelcastHealthTest
 
 
     @Test
-    public void testCacheStats() throws Exception
+    public void testMapStats() throws Exception
     {
 
         when(member.getAddress()).thenReturn(address);
@@ -193,11 +186,17 @@ public class HazelcastHealthTest
 
 
     @Test
-    public void testgetAddressException() throws Exception
+    public void testQueueStats() throws Exception
     {
-        PowerMockito.when(member.getAddress()).thenReturn(null);
 
-        assertNull(testObj.getInetAddress(member));
+        when(member.getAddress()).thenReturn(address);
+        when(hazelcastInstance.getQueue("test-queue")).thenReturn(queue);
+        when(queue.getLocalQueueStats()).thenReturn(localQueueStats);
+
+        MutableMap <String, LocalQueueStats> result = testObj.queueStats(hazelcastInstance);
+
+        assertThat(result, hasEntry("test-queue", localQueueStats));
     }
+
 
 }
