@@ -37,16 +37,6 @@
         </dependency>
 
         <dependency>
-            <groupId>com.hazelcast</groupId>
-            <artifactId>hazelcast-eureka-one</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.hazelcast</groupId>
-            <artifactId>hazelcast-client</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>com.github.stefanbirkner</groupId>
             <artifactId>system-rules</artifactId>
             <scope>compile</scope>
@@ -62,12 +52,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>compile</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.eclipse.collections</groupId>
-            <artifactId>eclipse-collections</artifactId>
-            <version>9.2.0</version>
         </dependency>
 
     </dependencies>

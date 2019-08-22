@@ -34,7 +34,17 @@
         <dependency>
             <groupId>com.athul</groupId>
             <artifactId>common-config</artifactId>
-            <version>0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.hazelcast</groupId>
+            <artifactId>hazelcast-eureka-one</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.hazelcast</groupId>
+            <artifactId>hazelcast-client</artifactId>
         </dependency>
 
     </dependencies>
@@ -57,12 +67,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-
-            <plugin>
-                <groupId>io.fabric8</groupId>
-                <artifactId>fabric8-maven-plugin</artifactId>
-            </plugin>
-
 
         </plugins>
     </build>
