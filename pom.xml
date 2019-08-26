@@ -387,7 +387,7 @@
                     <value>gcr</value>
                 </property>
                 <file>
-                    <exists>${project.basedir}/deploy/DockerFile</exists>
+                    <exists>${basedir}/deploy/DockerFile</exists>
                 </file>
             </activation>
             <build>
@@ -405,8 +405,8 @@
                                         <tags>
                                             <tag>latest</tag>
                                         </tags>
-                                        <dockerFile>${project.basedir}/deploy/DockerFile</dockerFile>
-                                        <contextDir>${project.basedir}</contextDir>
+                                        <dockerFile>${basedir}/deploy/DockerFile</dockerFile>
+                                        <contextDir>${basedir}</contextDir>
                                     </build>
                                 </image>
                             </images>

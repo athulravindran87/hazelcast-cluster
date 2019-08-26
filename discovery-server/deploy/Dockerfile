@@ -7,8 +7,6 @@ LABEL maintainer="athul.ravindran87@gmail.com"
 # Add a volume pointing to /tmp
 VOLUME /usr/app
 
-RUN pwd
-RUN ls -lart
 COPY /target/discovery-server-0.1-SNAPSHOT.jar /tmp/discovery-server.jar
 
 WORKDIR /tmp
