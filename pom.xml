@@ -387,7 +387,7 @@
                     <value>gcr</value>
                 </property>
                 <file>
-                    <exists>${basedir}/deploy/DockerFile</exists>
+                    <exists>deploy</exists>
                 </file>
             </activation>
             <build>
