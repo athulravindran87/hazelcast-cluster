@@ -68,5 +68,4 @@ Use ```/actuator/health``` on hazelcast server to view custom implemented health
    - /queue/put?value=xx
    - /queue/get
    
- ### Happy Coding !!!! :+1::shipit:  
 
